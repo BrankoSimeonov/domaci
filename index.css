@@ -1,0 +1,85 @@
+/* Nikolin pocetni css */
+
+/* U sledecim komentarina su: */
+
+
+/* font Dosis postavljen u asterixu sto znaci da ce svugde primeniti taj font */
+
+* {
+    font-family: "Dosis";
+}
+
+body {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background: #f9f9f9;
+}
+
+/* naslovi su svi Roboto */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto";
+}
+
+/* HEADER SECTION */
+
+header {
+    background: url(images/header.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+header img {
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    background:#007bff;
+    padding: 3px;
+    color:#fff;
+    border-radius: 10px;
+    margin-bottom: 5px;;
+}
+
+.podnaslov {
+    background: #17a2b8;
+    border-radius: 10px;
+    color:#fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 3px;
+    margin: 0 100px;
+}
+
+/* NAVIGATION SECTION */
+
+nav li {
+    font-size: 1.2rem;
+}
+
+/* MAIN */
+
+.dobrodosli {
+    font-style: italic;
+    border-bottom: 1px solid #17a2b8;
+    background: #17a2b8;
+    color:#fff;
+    font-size: 2rem;
+}
+
+/* FOOTER */
+
+footer {
+    background: #666;
+    color:#fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+/* OVDE JE KRAJ NIKOLINOG POCETNOG CSS-a, ISPOD SE PISE DETALJNIJE! */
+
+
