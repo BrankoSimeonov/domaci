@@ -30,7 +30,7 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        document.getElementById("forma").reset();
+        document.getElementById("forma2").reset();
         document.getElementById("korpa2").disabled = true;
     }
 
@@ -46,7 +46,7 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        document.getElementById("forma").reset();
+        document.getElementById("forma3").reset();
         document.getElementById("korpa3").disabled = true;
     }
 
@@ -62,7 +62,7 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        document.getElementById("forma").reset();
+        document.getElementById("forma4").reset();
         document.getElementById("korpa4").disabled = true;
     }
 
@@ -70,7 +70,7 @@
         var vrstar = document.getElementById("tip").value;
         var kom = document.getElementById("komada").value;
         document.getElementById("ukupno").value = (document.getElementById("cena").value * kom).toFixed(2);
-        if (vrstar!="0" && kom>0) document.getElementById("korpa1").disabled = false;
+        if (vrstar!="0" && kom>0) document.getElementById("korpa1").disabled = false; else document.getElementById("korpa1").disabled = true;
         if(vrstar=="100r"){
             document.getElementById("cena").value ="1.2";
         }else if (vrstar=="120r"){
@@ -90,7 +90,7 @@
         var vrstar = document.getElementById("tip2").value;
         var kom = document.getElementById("komada2").value;
         document.getElementById("ukupno2").value = (document.getElementById("cena2").value * kom).toFixed(2);
-        if (vrstar!="0" && kom>0) document.getElementById("korpa2").disabled = false;
+        if (vrstar!="0" && kom>0) document.getElementById("korpa2").disabled = false; else document.getElementById("korpa2").disabled = true;
         if(vrstar=="100uF"){
             document.getElementById("cena2").value ="50";
         }else if (vrstar=="220uF"){
@@ -110,7 +110,7 @@
         var vrstar = document.getElementById("tip3").value;
         var kom = document.getElementById("komada3").value;
         document.getElementById("ukupno3").value = (document.getElementById("cena3").value * kom).toFixed(2);
-        if (vrstar!="0" && kom>0) document.getElementById("korpa3").disabled = false;
+        if (vrstar!="0" && kom>0) document.getElementById("korpa3").disabled = false; else document.getElementById("korpa3").disabled = true;
         if(vrstar=="1N4007"){
             document.getElementById("cena3").value ="5";
         }else if (vrstar=="1N5404"){
@@ -130,7 +130,7 @@
         var vrstar = document.getElementById("tip4").value;
         var kom = document.getElementById("komada4").value;
         document.getElementById("ukupno4").value = (document.getElementById("cena4").value * kom).toFixed(2);
-        if (vrstar!="0" && kom>0) document.getElementById("korpa4").disabled = false;
+        if (vrstar!="0" && kom>0) document.getElementById("korpa4").disabled = false; else document.getElementById("korpa4").disabled = true;
         if(vrstar=="2N2222A"){
             document.getElementById("cena4").value ="3";
         }else if (vrstar=="2N3439"){

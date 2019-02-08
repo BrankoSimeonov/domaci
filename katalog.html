@@ -86,9 +86,9 @@
             </div>
             
             
-        <form id="forma">
             <table>
                 <tr>
+                <form id="forma">
                     <td><img src="images/otpornik.png"></td>
                     <td><input type="text" disabled value="otpornik" size="10" id="vrsta"></td>
                     <td><select id="tip" onChange="funkcija()">
@@ -104,9 +104,11 @@
                 <td><input type="text" disabled value="cena po komadu" id="cena"></td>
                 <td><input type="text" disabled value="ukupno" id="ukupno"></td>
                 <td><input type="button" id="korpa1" disabled value="dodaj u korpu" onclick="locstormake()"></td>
+                </form> 
                 </tr>
 
                 <tr>
+                    <form id="forma2">
                     <td><img src="images/elektrolitskikondenzator.png"></td>
                     <td><input type="text" disabled value="kondenzator" size="10" id="vrsta2"></td>
                     <td><select id="tip2" onChange="funkcija2()">
@@ -122,9 +124,11 @@
                 <td><input type="text" disabled value="cena po komadu" id="cena2"></td>
                 <td><input type="text" disabled value="ukupno" id="ukupno2"></td>
                 <td><input type="button" id="korpa2" disabled value="dodaj u korpu" onclick="locstormake2()"></td>
+                </form>
                 </tr>
                 
                 <tr>
+                    <form id="forma3">
                     <td><img src="images/dioda.png"></td>
                     <td><input type="text" disabled value="dioda" size="10" id="vrsta3"></td>
                     <td><select id="tip3" onChange="funkcija3()">
@@ -140,9 +144,11 @@
                 <td><input type="text" disabled value="cena po komadu" id="cena3"></td>
                 <td><input type="text" disabled value="ukupno" id="ukupno3"></td>
                 <td><input type="button" id="korpa3" disabled value="dodaj u korpu" onclick="locstormake3()"></td>
+                </form>
                 </tr>
                 
                 <tr>
+                    <form id="forma4">
                     <td><img src="images/tranzistor.png"></td>
                     <td><input type="text" disabled value="tranzistor" size="10" id="vrsta4"></td>
                     <td><select id="tip4" onChange="funkcija4()">
@@ -158,10 +164,11 @@
                 <td><input type="text" disabled value="cena po komadu" id="cena4"></td>
                 <td><input type="text" disabled value="ukupno" id="ukupno4"></td>
                 <td><input type="button" id="korpa4" disabled value="dodaj u korpu" onclick="locstormake4()"></td>
+                </form>
                 </tr>
             </table>
             <input type="button" value="Idi na kasu"  onclick=" location.href = 'korpa.html' , send() ">
-        </form>    
+           
         </main>
         <!-- Dodati footer izmeniti text -->
         <footer>text</footer>
