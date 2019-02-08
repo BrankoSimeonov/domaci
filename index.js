@@ -5,4 +5,5 @@ function data(){
     localStorage.setItem("ime", ime );  
     localStorage.setItem("prezime", prezime );  
     localStorage.setItem("email", email );  
+    document.getElementById("login").style.display = "none";
 }
