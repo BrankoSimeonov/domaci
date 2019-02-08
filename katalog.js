@@ -1,7 +1,11 @@
     var red = [];
     localStorage.clickcount = 0;
     
-         
+    function run(){
+        var ime = localStorage.getItem("ime");
+        var prezime = localStorage.getItem("prezime");
+        document.getElementById("kupac").innerHTML = ' ' +ime+ ' ' +prezime;
+    }
     function locstormake(){
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
