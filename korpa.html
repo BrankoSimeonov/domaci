@@ -3,39 +3,58 @@
 <html lang="sr">
 
 <head>
-    <meta charset="utf-8">
-    <title>Mala prodavnica elektornike - Korpa</title>
 
+    <title>Mala prodavnica elektornike - Korpa</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
     <meta name="description" content="Distribucija i prodaja na veliko i malo elektronskih komponenti">
     <meta name="author" content="FrontEnd Zrenjanin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-        crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
+    <!-- Custom JS za korpu -->
     <script>
         function start() {
-        var r = 0;    
-        var red = localStorage.getItem("red");
-        var rod = red.split(",");
-        for (x=0; x<rod.length; x=x+6){
-            var trow = document.createElement("tr");
-            document.getElementById("pText").appendChild(trow);
-            for (i=0; i<6; i=i+1 ){
-                var tdat = document.createElement("td");
-                tdat.innerHTML = rod[i+r]
-                document.getElementById("pText").appendChild(tdat);
+            var r = 0;
+            var total = 0;
+            var red = localStorage.getItem("red");
+            var rod = red.split(",");
+            if (rod.length < 6) {
+                alert("Prazna korpa");
             }
-            r=r+6;
+            else {
+                for (x = 0; x < rod.length; x = x + 6) {
+                    var trow = document.createElement("tr");
+                    document.getElementById("pText").appendChild(trow);
+                    for (i = 0; i < 6; i = i + 1) {
+                        if (i == 5) total = total + parseFloat(rod[i + r]);
+                        var tdat = document.createElement("td");
+                        tdat.innerHTML = rod[i + r];
+                        document.getElementById("pText").appendChild(tdat);
+                    }
+                    r = r + 6;
+                }
+            }
+            document.getElementById("total").innerHTML = 'postovani <b>IME</b> i <b>PREZIME</b>, vas ukupan racun je <b>' + total.toFixed(2) + '</b> RSD';
         }
-        }
-    window.onload = start;
+
+        window.onload = start;
     </script>
 </head>
 
 <body>
+    <!-- Bootstrap JavaScript -->
+    <!-- jQuery deo i Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
     <!-- Js kod -->
     <script src="js/scripts.js"></script>
     <div class="container">
@@ -98,6 +117,8 @@
         </main>
         <!-- Dodati footer izmeniti text -->
         <table id="pText"></table>
+        <hr>
+        <p id="total"></p>
         <footer>text</footer>
     </div>
 </body>
