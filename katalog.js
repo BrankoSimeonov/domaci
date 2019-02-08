@@ -1,5 +1,6 @@
     var red = [];
     localStorage.clickcount = 0;
+    
          
     function locstormake(){
         if (localStorage.clickcount) {
@@ -13,8 +14,8 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        alert(red);
         document.getElementById("forma").reset();
+        document.getElementById("korpa1").disabled = true;
     }
  
     function locstormake2(){
@@ -29,8 +30,8 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        alert(red);
         document.getElementById("forma").reset();
+        document.getElementById("korpa2").disabled = true;
     }
 
     function locstormake3(){
@@ -45,8 +46,8 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        alert(red);
         document.getElementById("forma").reset();
+        document.getElementById("korpa3").disabled = true;
     }
 
     function locstormake4(){
@@ -61,13 +62,15 @@
         var mnozenje = parseFloat(komada).toFixed(2) * parseFloat(cena).toFixed(2);
         var ukupnacena = mnozenje.toFixed(2);
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
-        alert(red);
         document.getElementById("forma").reset();
+        document.getElementById("korpa4").disabled = true;
     }
 
     function funkcija(){
         var vrstar = document.getElementById("tip").value;
-        document.getElementById("ukupno").value = (document.getElementById("cena").value * document.getElementById("komada").value).toFixed(2);
+        var kom = document.getElementById("komada").value;
+        document.getElementById("ukupno").value = (document.getElementById("cena").value * kom).toFixed(2);
+        if (vrstar!="0" && kom>0) document.getElementById("korpa1").disabled = false;
         if(vrstar=="100r"){
             document.getElementById("cena").value ="1.2";
         }else if (vrstar=="120r"){
@@ -80,12 +83,14 @@
             document.getElementById("cena").value ="1.6";
         }else{
             document.getElementById("cena").value ="";
-        }
+        }  
     }
         
     function funkcija2(){
         var vrstar = document.getElementById("tip2").value;
-        document.getElementById("ukupno2").value = (document.getElementById("cena2").value * document.getElementById("komada2").value).toFixed(2);
+        var kom = document.getElementById("komada2").value;
+        document.getElementById("ukupno2").value = (document.getElementById("cena2").value * kom).toFixed(2);
+        if (vrstar!="0" && kom>0) document.getElementById("korpa2").disabled = false;
         if(vrstar=="100uF"){
             document.getElementById("cena2").value ="50";
         }else if (vrstar=="220uF"){
@@ -103,7 +108,9 @@
     
     function funkcija3(){
         var vrstar = document.getElementById("tip3").value;
-        document.getElementById("ukupno3").value = (document.getElementById("cena3").value * document.getElementById("komada3").value).toFixed(2);
+        var kom = document.getElementById("komada3").value;
+        document.getElementById("ukupno3").value = (document.getElementById("cena3").value * kom).toFixed(2);
+        if (vrstar!="0" && kom>0) document.getElementById("korpa3").disabled = false;
         if(vrstar=="1N4007"){
             document.getElementById("cena3").value ="5";
         }else if (vrstar=="1N5404"){
@@ -121,7 +128,9 @@
                     
     function funkcija4(){
         var vrstar = document.getElementById("tip4").value;
-        document.getElementById("ukupno4").value = (document.getElementById("cena4").value * document.getElementById("komada4").value).toFixed(2);
+        var kom = document.getElementById("komada4").value;
+        document.getElementById("ukupno4").value = (document.getElementById("cena4").value * kom).toFixed(2);
+        if (vrstar!="0" && kom>0) document.getElementById("korpa4").disabled = false;
         if(vrstar=="2N2222A"){
             document.getElementById("cena4").value ="3";
         }else if (vrstar=="2N3439"){

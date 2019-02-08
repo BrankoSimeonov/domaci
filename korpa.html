@@ -20,6 +20,10 @@
         var r = 0;    
         var red = localStorage.getItem("red");
         var rod = red.split(",");
+        if (rod.length<6){
+            alert("Prazna korpa");
+        }
+        else{
         for (x=0; x<rod.length; x=x+6){
             var trow = document.createElement("tr");
             document.getElementById("pText").appendChild(trow);
@@ -29,7 +33,7 @@
                 document.getElementById("pText").appendChild(tdat);
             }
             r=r+6;
-        }
+        }}
         }
     window.onload = start;
     </script>
