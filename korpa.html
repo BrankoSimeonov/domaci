@@ -15,7 +15,24 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="index.css">
-
+    <script>
+        function start() {
+        var r = 0;    
+        var red = localStorage.getItem("red");
+        var rod = red.split(",");
+        for (x=0; x<rod.length; x=x+6){
+            var trow = document.createElement("tr");
+            document.getElementById("pText").appendChild(trow);
+            for (i=0; i<6; i=i+1 ){
+                var tdat = document.createElement("td");
+                tdat.innerHTML = rod[i+r]
+                document.getElementById("pText").appendChild(tdat);
+            }
+            r=r+6;
+        }
+        }
+    window.onload = start;
+    </script>
 </head>
 
 <body>
@@ -80,6 +97,7 @@
 
         </main>
         <!-- Dodati footer izmeniti text -->
+        <table id="pText"></table>
         <footer>text</footer>
     </div>
 </body>
