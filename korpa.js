@@ -1,6 +1,8 @@
 function start() {
     var r = 0;
     var total = 0;
+    var ime = localStorage.getItem("ime");
+    var prezime = localStorage.getItem("prezime");
     var red = localStorage.getItem("red");
     var rod = red.split(",");
     if (rod.length < 6) {
@@ -19,5 +21,5 @@ function start() {
             r = r + 6;
         }
     }
-    document.getElementById("total").innerHTML = 'postovani <b>IME</b> i <b>PREZIME</b>, vas ukupan racun je <b>' + total.toFixed(2) + '</b> RSD';
+    document.getElementById("total").innerHTML = 'postovani <b>'+ime+' '+prezime+'</b>, vas ukupan racun je <b>' + total.toFixed(2) + '</b> RSD';
 }
