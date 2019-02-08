@@ -17,6 +17,10 @@
         crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
+    <!-- Bootstrap JavaScript -->
+    <!-- Js kod  - mora da stoji ovde Goran -->
+    <script src="index.js"></script>
+    <script>window.onload = index</script>
 
 </head>
 
@@ -27,8 +31,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <!-- Js kod -->
-    <script src="index.js"></script>
+    
     <div class="container">
         <header>
             <!-- Header podeljen u tri dela -->
@@ -87,16 +90,24 @@
             <!-- Dobrodosli card uradjen u bootstrapu -->
             <div class="card border-info mb-3">
                 <div class="card-header dobrodosli">Dobrodošli</div>
-                <div class="card-body text-info">
-                    <h5 class="card-title">Poštovani kupci</h5>
+                <div id="docek" class="card-body text-info">
+                    <h5 id="klijent" class="card-title">Poštovani kupci</h5>
                     <p class="card-text">U ovom posebnom trenutku za nas, na dan otvaranja zvanične strane brenda
                         Prodavnica
                         Elektronike, želimo da Vam se zahvalimo na 3 sjajna meseca sa Vama. Želimo da Vam se zahvalimo
                         na
-                        dosadašnjem poverenju, svratite do naših prodajnih mesta. Srecna Kupovina. <br><strong>Molimo
+                        dosadašnjem poverenju, svratite do naših prodajnih mesta. Srecna Kupovina. <br><span id="poruka"><strong>Molimo
                             Vas
                             unesite podatke u
-                            formular koji se nalazi ispod.</strong></p>
+                            formular koji se nalazi ispod.</strong></span></p>
+                            <div id="logo" style="display:none">
+                                <svg height="510" width="510">
+                                    <polygon id="back" points="30,0 480,0 440,460 255,510 70,460" style="fill:rgb(255,200,50);"></polygon>
+                                    <polygon id="frontend1" points="115,92 255,92 240,150 175,150 182,206 226,206 210,265 185,265 190,338 177,390 140,380" style="fill:rgb(0,0,0);"></polygon>   <!-- naredba    stroke:purple;stroke-width:1   daje border -->
+                                    <polygon id="frontend2" points="285,92 400,92 370,380 255,413 205,400 220,345 255,353 318,336 325,265 240,265 255,206 330,206 335,150 270,150" style="fill:rgb(0,0,0);"></polygon>
+                                    <polygon points="255,35 440,35 400,430 255,470" style="fill:rgba(255,255,255,0.3);"></polygon>
+                                </svg>
+                            </div>      
                 </div>
                 <!-- dusan forma-->
                 <div  id="login"  class="wrapper fadeInDown">
@@ -123,6 +134,8 @@
                 </div>
                 <!-- dusan forma -->
             </div>
+            
+        
         </main>
         <!-- Dodati footer izmeniti text -->
         <footer>text</footer>
