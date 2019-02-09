@@ -13,12 +13,11 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-- Bootstrap JavaScript -->
-    <!-- Js kod  - mora da stoji ovde Goran -->
+    <!-- Js kod za pocetnu stranu -->
     <script src="index.js"></script>
     <script>window.onload = index</script>
 
@@ -27,11 +26,13 @@
 <body>
     <!-- Bootstrap JavaScript -->
     <!-- jQuery deo i Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    
+
     <div class="container">
         <header>
             <!-- Header podeljen u tri dela -->
@@ -96,56 +97,69 @@
                         Prodavnica
                         Elektronike, želimo da Vam se zahvalimo na 3 sjajna meseca sa Vama. Želimo da Vam se zahvalimo
                         na
-                        dosadašnjem poverenju, svratite do naših prodajnih mesta. Srecna Kupovina. <br><span id="poruka"><strong>Molimo
-                            Vas
-                            unesite podatke u
-                            formular koji se nalazi ispod.</strong></span></p>
-                            <div id="logo" style="display:none">
-                                <svg height="510" width="510">
-                                    <polygon id="back" points="30,0 480,0 440,460 255,510 70,460" style="fill:rgb(255,200,50);"></polygon>
-                                    <polygon id="frontend1" points="115,92 255,92 240,150 175,150 182,206 226,206 210,265 185,265 190,338 177,390 140,380" style="fill:rgb(0,0,0);"></polygon>   <!-- naredba    stroke:purple;stroke-width:1   daje border -->
-                                    <polygon id="frontend2" points="285,92 400,92 370,380 255,413 205,400 220,345 255,353 318,336 325,265 240,265 255,206 330,206 335,150 270,150" style="fill:rgb(0,0,0);"></polygon>
-                                    <polygon points="255,35 440,35 400,430 255,470" style="fill:rgba(255,255,255,0.3);"></polygon>
-                                </svg>
-                            </div>      
+                        dosadašnjem poverenju, svratite do naših prodajnih mesta. Srecna Kupovina. <br><span
+                            id="poruka"><strong>Molimo
+                                Vas
+                                unesite podatke u
+                                formular koji se nalazi ispod.</strong></span></p>
+                    <div id="logo" style="display:none">
+                        <svg height="510" width="510">
+                            <polygon id="back" points="30,0 480,0 440,460 255,510 70,460" style="fill:rgb(255,200,50);">
+                            </polygon>
+                            <polygon id="frontend1"
+                                points="115,92 255,92 240,150 175,150 182,206 226,206 210,265 185,265 190,338 177,390 140,380"
+                                style="fill:rgb(0,0,0);"></polygon>
+                            <!-- naredba    stroke:purple;stroke-width:1   daje border -->
+                            <polygon id="frontend2"
+                                points="285,92 400,92 370,380 255,413 205,400 220,345 255,353 318,336 325,265 240,265 255,206 330,206 335,150 270,150"
+                                style="fill:rgb(0,0,0);"></polygon>
+                            <polygon points="255,35 440,35 400,430 255,470" style="fill:rgba(255,255,255,0.3);">
+                            </polygon>
+                        </svg>
+                    </div>
                 </div>
                 <!-- dusan forma-->
-                <div  id="login"  class="wrapper fadeInDown">
-                    <div id="formContent">           
+                <div id="login" class="wrapper fadeInDown">
+                    <div id="formContent">
                         <!-- Icon -->
                         <div class="fadeIn first">
                             <!-- <img src="https://i.imgur.com/6b6psnA.png" id="icon" alt="Log in" /> -->
                             <h2 id="naslov">ulogujte se</h2>
-                        </div>            
+                        </div>
                         <!-- Login Form  - nije vise, za uzimanje imena i prezimena mi ne treba, pravi problem sa zatvaranjem ako ima formu na sebi tako da sam je obrisao - Goran :) -->
                         <!-- target="_blank" method="POST" u zavisnosti sta Goranu treba-->
-<<<<<<< HEAD
-                        
-                            <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="first name" autocomplete="off" required>
-                            <input type="text" id="lastName" class="fadeIn third" name="lastName" placeholder="last name" autocomplete="off" required>
-                        <!--    <input type="text" id="password" class="fadeIn fourth" name="password" placeholder="password" autocomplete="off" required>  -->
-                            <input type="text" id="email" class="fadeIn fourth" name="address" placeholder="e mail" autocomplete="off" required>
+                        <<<<<<< HEAD <input type="text" id="firstName" class="fadeIn second" name="firstName"
+                            placeholder="first name" autocomplete="off" required>
+                            <input type="text" id="lastName" class="fadeIn third" name="lastName"
+                                placeholder="last name" autocomplete="off" required>
+                            <!--    <input type="text" id="password" class="fadeIn fourth" name="password" placeholder="password" autocomplete="off" required>  -->
+                            <input type="text" id="email" class="fadeIn fourth" name="address" placeholder="e mail"
+                                autocomplete="off" required>
                             <input type="submit" id="submit" class="fadeIn fifth" value="Log In" onclick="data()">
-                                   
-=======
-                        <form action="#" method="GET">
-                            <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="ime" autocomplete="off" required>
-                            <input type="text" id="lastName" class="fadeIn third" name="lastName" placeholder="prezime" autocomplete="off" required>
-                            <input type="text" id="password" class="fadeIn fourth" name="password" placeholder="lozinka" autocomplete="off" required>
-                            <input type="text" id="address" class="fadeIn fifth" name="address" placeholder="adresa" autocomplete="off" required>
-                            <input type="submit" id="submit" class="fadeIn sixth" value="Log In">
-                        </form>           
->>>>>>> Promena na srpski
-                        <!-- Remind Password -->
-                        <div id="formFooter">
-                            <a class="underlineHover" href="#">Zaboravili ste lozinku?</a>
-                        </div>           
+
+                            =======
+                            <form action="#" method="GET">
+                                <input type="text" id="firstName" class="fadeIn second" name="firstName"
+                                    placeholder="ime" autocomplete="off" required>
+                                <input type="text" id="lastName" class="fadeIn third" name="lastName"
+                                    placeholder="prezime" autocomplete="off" required>
+                                <input type="text" id="password" class="fadeIn fourth" name="password"
+                                    placeholder="lozinka" autocomplete="off" required>
+                                <input type="text" id="address" class="fadeIn fifth" name="address" placeholder="adresa"
+                                    autocomplete="off" required>
+                                <input type="submit" id="submit" class="fadeIn sixth" value="Log In">
+                            </form>
+                            >>>>>>> Promena na srpski
+                            <!-- Remind Password -->
+                            <div id="formFooter">
+                                <a class="underlineHover" href="#">Zaboravili ste lozinku?</a>
+                            </div>
                     </div>
                 </div>
                 <!-- dusan forma -->
             </div>
-            
-        
+
+
         </main>
         <!-- Dodati footer izmeniti text -->
         <footer>text</footer>
