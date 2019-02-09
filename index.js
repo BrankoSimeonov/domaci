@@ -1,49 +1,30 @@
-// var check = localStorage.getItem("check");
-
-// function index(){
-    
-   // window.onbeforeunload = function() {
-   //     localStorage.removeItem("check");
-    //    return '';
-     // };
-   //   alert(check);
-   //   if(check == "true" ){document.getElementById("login").style.display = "none";
-   // data();}
-// }
-
-//  RADIM NA TOME DA SE NE POJAVLJUJE LOGIN SVAKI PUT KAD SE VRATIMO NA POCETNU STRANU
+// funkcija onload - proverava da li smo vec logovani, smesta u sessionStorage , ako zatvorimo browser, moracemo ponovo da upisujemo ime i prezime, dok god je tab otvoren, nebitno na kojoj strani, nema logovanja
 function index(){
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.shadowBlur = 50;
-ctx.shadowColor = "white";
-ctx.lineWidth = 2;
-ctx.font = "90px Anton";
-// Create gradient
-var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
-gradient.addColorStop("0", "orange");
-gradient.addColorStop("0.5", "yellow");
-gradient.addColorStop("1.0", "orange");
-// Fill with gradient
-ctx.strokeStyle = gradient;
-ctx.strokeText("FrontEnd", 20, 90);
-ctx.strokeText("Developer", 20, 240);
-ctx.strokeText("Team ZR", 20, 390);
+var check = sessionStorage.getItem("check");
+if(check == "true" ){document.getElementById("login").style.display = "none";
+var check = true;
+     data();}
 }
 
 
 function data(){
-   // var check = true;
-    var ime = document.getElementById("firstName").value;
-    var prezime = document.getElementById("lastName").value;
-    var email = document.getElementById("email").value;
-    localStorage.setItem("ime", ime );  
-    localStorage.setItem("prezime", prezime );  
-    localStorage.setItem("email", email );
-    //localStorage.setItem("check", check );  
-    document.getElementById("login").style.display = "none";
-    document.getElementById("docek").style.backgroundImage = "url('images/electronics.png')";
+    var check = sessionStorage.getItem("check");
+    if(check == "true" ){                                   // prvo proveravam da li sam vec logovan
+        var ime = localStorage.getItem("ime");              // i ako jesam vadim ime prezime i mail iz localStorage
+        var prezime = localStorage.getItem("prezime");
+        var email = localStorage.getItem("email");}
+    else{
+        var ime = document.getElementById("firstName").value;       // ako nisam znaci da se sad zavrsila forma
+        var prezime = document.getElementById("lastName").value;    // i upisujem u local storage ime prezime i email
+        var email = document.getElementById("email").value;
+        localStorage.setItem("ime", ime );  
+        localStorage.setItem("prezime", prezime );  
+        localStorage.setItem("email", email );}
     
+    var check = true;                                           // ovaj check sluzi da sakrije login ako je program prosao ovuda, znaci vec je logovan
+    sessionStorage.setItem("check",check);
+    document.getElementById("login").style.display = "none";          // sakrivam login
+    document.getElementById("docek").style.backgroundImage = "url('images/electronics.png')";    //  stavljam background image
         
     document.getElementById("klijent").innerHTML = " ";                     
     var string = " "+ime+" "+prezime+" ";
@@ -60,7 +41,24 @@ function data(){
     (function animate() {                      
         str1.length > 0 ? el1.innerHTML += str1.shift() : clearTimeout(running1);      
         var running1 = setTimeout(animate, 5);})();
-        
-    document.getElementById("logo").style.display = "block";
+    
+        var c = document.getElementById("myCanvas");                                    //   tekst sa dene strane logoa
+        var ctx = c.getContext("2d");
+        ctx.shadowBlur = 50;
+        ctx.shadowColor = "white";
+        ctx.lineWidth = 2;
+        ctx.font = "90px Anton";
+        // Create gradient
+        var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+        gradient.addColorStop("0", "orange");
+        gradient.addColorStop("0.5", "yellow");
+        gradient.addColorStop("1.0", "orange");
+        // Fill with gradient
+        ctx.strokeStyle = gradient;
+        ctx.strokeText("FrontEnd", 20, 90);
+        ctx.strokeText("Developer", 20, 240);
+        ctx.strokeText("Team ZR", 20, 390);    
+
+    document.getElementById("logo").style.display = "block";                            // palim logo i tekst pored njega
     document.getElementById("frontend").style.display = "block";
 }
