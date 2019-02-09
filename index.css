@@ -374,3 +374,30 @@ input[type=text]:placeholder {
     width: 30%;
 }
 /*dusan*/
+
+/* stranica Pomoc */
+.pomoc{
+    text-align: center;
+    background-color: transparent;
+    margin-top: 15px;
+}
+.pregled{
+    width: 120px;
+    padding-left: 15px;
+    text-align: center;
+}
+#uplatnica{
+    transition: transform .3s;
+    width: 300px;
+}
+#uplatnica:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    width: 700px;
+    padding-left: 150px;
+}
+#cards{
+    width: 50px;
+}
+/* kraj stranice Pomoc */
