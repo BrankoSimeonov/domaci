@@ -23,3 +23,8 @@ function start() {
     }
     document.getElementById("total").innerHTML = 'postovani <b>'+ime+' '+prezime+'</b>, vas ukupan racun je <b>' + total.toFixed(2) + '</b> RSD';
 }
+// pop up za zavrsavanje kupovine;
+function finish(){
+    var ime = localStorage.getItem("ime");
+    alert("Hvala " +ime+ " sto ste kupovali kod nas,posetite nas opet!");
+}
