@@ -62,3 +62,16 @@ function data(){
     document.getElementById("logo").style.display = "block";                            // palim logo i tekst pored njega
     document.getElementById("frontend").style.display = "block";
 }
+
+            // funkcija za prva dva polja, ime i prezime, vraca automatski prvo slovo veliko, ako nije upisano nista vraca prazno
+            function capitalize(form){
+                value = form.value;
+                if (value == ""){return}
+                else{
+                    velikoslovo = '';
+                    value = value.split(' ');
+                for(var i = 0; i < value.length; i++) {
+                    velikoslovo += value[i].substring(0,1).toUpperCase() + value[i].substring(1,value[i].length) + ' ';
+                    }
+                form.value = velikoslovo;}
+            }

@@ -124,8 +124,8 @@
                         <!-- Login Form  - nije vise, za uzimanje imena i prezimena mi ne treba, pravi problem sa zatvaranjem ako ima formu na sebi tako da sam je obrisao - Goran :) -->
                         <!-- target="_blank" method="POST" u zavisnosti sta Goranu treba-->
 
-                            <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="Ime" autocomplete="off" required>
-                            <input type="text" id="lastName" class="fadeIn third" name="lastName" placeholder="Prezime" autocomplete="off" required>
+                            <input type="text" id="firstName" class="fadeIn second" name="firstName" placeholder="Ime" autocomplete="off" onblur ="capitalize(this)" required>
+                            <input type="text" id="lastName" class="fadeIn third" name="lastName" placeholder="Prezime" autocomplete="off" onblur ="capitalize(this)" required>
                         <!--    <input type="text" id="password" class="fadeIn fourth" name="password" placeholder="password" autocomplete="off" required>  -->
                             <input type="text" id="email" class="fadeIn fourth" name="address" placeholder="Adresa" autocomplete="off" required>
                             <input type="submit" id="submit" class="fadeIn fifth" value="Log In" onclick="data()">
