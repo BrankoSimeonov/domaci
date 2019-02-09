@@ -14,12 +14,11 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
-    <!-- Bootstrap JavaScript -->
-    <!-- Js kod - mora ovde da stoji -->
+    <!-- Js kod za katalog -->
     <script src="katalog.js"></script>
     <script>window.onload = run</script>
 </head>
@@ -27,9 +26,11 @@
 <body>
     <!-- Bootstrap JavaScript -->
     <!-- jQuery deo i Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
     <div class="container">
         <header>
@@ -62,7 +63,8 @@
                                 <a class="nav-link" href="index.html">Početna</a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link" href="katalog.html">Katalog<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="katalog.html">Katalog<span
+                                        class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="korpa.html">Korpa</a>
@@ -108,11 +110,12 @@
                                 <option value="100k">100K</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada" onclick="funkcija()"
-                                onChange="funkcija()"></td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada"
+                                onclick="funkcija()" onChange="funkcija()"></td>
                         <td><input type="text" disabled value="cena po komadu" id="cena"></td>
                         <td><input type="text" disabled value="ukupno" id="ukupno"></td>
-                        <td><input type="button" id="korpa1" disabled value="dodaj u korpu" onclick="locstormake()"></td>
+                        <td><input type="button" id="korpa1" disabled value="dodaj u korpu" onclick="locstormake()">
+                        </td>
                     </form>
                 </tr>
 
@@ -129,11 +132,12 @@
                                 <option value="2200uF">2200uF</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada2" onclick="funkcija2()"
-                                onChange="funkcija2()"></td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada2"
+                                onclick="funkcija2()" onChange="funkcija2()"></td>
                         <td><input type="text" disabled value="cena po komadu" id="cena2"></td>
                         <td><input type="text" disabled value="ukupno" id="ukupno2"></td>
-                        <td><input type="button" id="korpa2" disabled value="dodaj u korpu" onclick="locstormake2()"></td>
+                        <td><input type="button" id="korpa2" disabled value="dodaj u korpu" onclick="locstormake2()">
+                        </td>
                     </form>
                 </tr>
 
@@ -150,11 +154,12 @@
                                 <option value="40HFR100M">40HFR100M</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada3" onclick="funkcija3()"
-                                onChange="funkcija3()"></td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada3"
+                                onclick="funkcija3()" onChange="funkcija3()"></td>
                         <td><input type="text" disabled value="cena po komadu" id="cena3"></td>
                         <td><input type="text" disabled value="ukupno" id="ukupno3"></td>
-                        <td><input type="button" id="korpa3" disabled value="dodaj u korpu" onclick="locstormake3()"></td>
+                        <td><input type="button" id="korpa3" disabled value="dodaj u korpu" onclick="locstormake3()">
+                        </td>
                     </form>
                 </tr>
 
@@ -171,11 +176,12 @@
                                 <option value="2SA1943">2SA1943</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada4" onclick="funkcija4()"
-                                onChange="funkcija4()"></td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada4"
+                                onclick="funkcija4()" onChange="funkcija4()"></td>
                         <td><input type="text" disabled value="cena po komadu" id="cena4"></td>
                         <td><input type="text" disabled value="ukupno" id="ukupno4"></td>
-                        <td><input type="button" id="korpa4" disabled value="dodaj u korpu" onclick="locstormake4()"></td>
+                        <td><input type="button" id="korpa4" disabled value="dodaj u korpu" onclick="locstormake4()">
+                        </td>
                     </form>
                 </tr>
             </table>
