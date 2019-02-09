@@ -12,7 +12,7 @@
 // }
 
 //  RADIM NA TOME DA SE NE POJAVLJUJE LOGIN SVAKI PUT KAD SE VRATIMO NA POCETNU STRANU
-
+function index(){
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.shadowBlur = 50;
@@ -29,7 +29,7 @@ ctx.strokeStyle = gradient;
 ctx.strokeText("FrontEnd", 20, 90);
 ctx.strokeText("Developer", 20, 240);
 ctx.strokeText("Team ZR", 20, 390);
-
+}
 
 
 function data(){
