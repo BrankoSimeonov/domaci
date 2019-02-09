@@ -44,4 +44,5 @@ function data(){
         var running1 = setTimeout(animate, 5);})();
         
     document.getElementById("logo").style.display = "block";
+    document.getElementById("frontend").style.display = "block";
 }
