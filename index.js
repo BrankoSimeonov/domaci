@@ -12,6 +12,24 @@
 // }
 
 //  RADIM NA TOME DA SE NE POJAVLJUJE LOGIN SVAKI PUT KAD SE VRATIMO NA POCETNU STRANU
+function index(){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.shadowBlur = 50;
+ctx.shadowColor = "white";
+ctx.lineWidth = 2;
+ctx.font = "90px Anton";
+// Create gradient
+var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+gradient.addColorStop("0", "orange");
+gradient.addColorStop("0.5", "yellow");
+gradient.addColorStop("1.0", "orange");
+// Fill with gradient
+ctx.strokeStyle = gradient;
+ctx.strokeText("FrontEnd", 20, 90);
+ctx.strokeText("Developer", 20, 240);
+ctx.strokeText("Team ZR", 20, 390);
+}
 
 
 function data(){
