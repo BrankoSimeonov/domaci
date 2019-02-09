@@ -73,18 +73,18 @@ nav li {
 /* FOOTER - Filip apdejtovao*/
 
 footer {
-    background: #292929;
+    background: #007bff;
     color:#fff;
     padding: 10px;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
-    border-top: 2px solid #007bff;
+    border-top: 2px solid #292929;
     text-align: center;
     font-size: 2.4vh;
     margin-top: 2vh;
 }
 footer a{
-  color: #007bff;
+  color: #292929;
 }
 footer a:hover{
   color: #17a2b8;
