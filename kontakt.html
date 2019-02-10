@@ -16,9 +16,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
-
+    <!--Font Awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 
 <body>
@@ -34,16 +37,16 @@
         <header>
             <!-- Header podeljen u tri dela -->
             <div class="row">
-                <div class="col-sm col-lg-3 prvi">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 prvi">
                     <a class="logo" href="index.html">
                         <img src="images/logo.png" width="150" alt="prodavnica logo">
                     </a>
                 </div>
-                <div class="col-sm col-lg-6 drugi text-center justify-content-center align-self-center">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center">
                     <h1 class="display-5">Internet prodavnica</h1>
                     <div class="display-6 podnaslov">Elektronskih komponenti</div>
                 </div>
-                <div class="col-sm col-lg-3 drugi text-center justify-content-center align-self-center treci">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center treci">
                     <img src="images/norton.png" width="200" alt="prodavnica logo">
                 </div>
             </div>
@@ -76,9 +79,10 @@
                                 <a class="nav-link" href="pomoc.html">Pomoc</a>
                             </li>
                         </ul>
-                        <form class="form-inline my-2 my-md-0">
-                            <input class="form-control" type="text" placeholder="Pretraga" aria-label="Search">
-                        </form>
+                     </div>
+                     <div class="search-box">
+                        <input  type="text"  placeholder="&#x1F440">
+                        <span></span>
                     </div>
                 </div>
             </nav>
@@ -86,69 +90,62 @@
         <main>
             <!-- Neli je pisala ovde-->
 
-         <div class="jumbotron">
-             <div class="container">
-                  <div class="row">
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-
-                        <a href="#" class="list-group-item active font-weight-bolder text-uppercase ">
-                        <div class="spinner-border text-light" role="status">
-                         <span class="sr-only">Loading...</span>
+            <div class="jumbotron">
+                
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3">
+       
+                            <a href="#" class="list-group-item active font-weight-bolder text-uppercase ">
+                               <div class="spinner-border text-light" role="status">
+                                <span class="sr-only">Loading...</span>
+                               </div>
+                                    kontaktirajte nas </a>
+       
+                                <p class="list-group-item ">adresa: Dr.Kornela Radulovica 18</p>
+                                <p class="list-group-item ">telefon: 023.123.456</p>
+                                <a href="#" class="list-group-item">email: <u>frontend.zr@gmail.com</u></a>
+                                
+       
+                                 <!--Ovde da se ubace slike za drustvene mreze-->
+       
+                                <!-- <img src="" alt="" width="50" height="50">
+       
+                                   <img src="" alt="" width="50" height="50">
+       
+                                   <img src="" alt="" width="50" height="50">
+       
+                                   <img src="" alt="" width="50" height="50"> -->
+                                   <!--ANIMACIJA ZA OVE IKONE JOS NIJE GOTOVA - Dragan-->
+                                   <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3 social">
+                                    <a href="#"><i class="fab fa-facebook"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                                 
                         </div>
-                             kontaktirajte nas </a>
-
-                         <p class="list-group-item ">adresa: Dr.Kornela Radulovica 18</p>
-                         <p class="list-group-item ">telefon: 023.123.456</p>
-                         <a href="#" class="list-group-item">email: <u>frontend.zr@gmail.com</u></a>
-                          <p class="list-group-item text-center">
-
-                          <!--Ovde su slike za drustvene mreze-->
-                            <a id="home">
-                                <img class="image_on" src="images/facebook.png" alt="facebook">
-                                <img class="image_off" src="images/facehover.png" alt="facebookhover">
-                            </a>
-
-                            <a id="home">
-                                <img class="image_on" src="images/linkedin.png" alt="linkedin">
-                                <img class="image_off" src="images/linhover.png" alt="linkhover">
-                            </a>
-
-                                <a id="home">
-                                    <img class="image_on" src="images/insta.png" alt="instagram">
-                                    <img class="image_off" src="images/instahover.png" alt="instahover">
-                                </a>
-
-                                <a id="home">
-                                    <img class="image_on" src="images/twitter.png" alt="twitter">
-                                    <img class="image_off" src="images/twitterhover.png" alt="twitterhover">
-                                </a>
-
-                          </p>
-                      </div>
-
-
-                        <div class="col-md-6 col-sm-6 col-xs-6">
-                               <!--Ubaciti mapu ovde -->
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.6805093835587!2d20.395372515554524!3d45.37544177910007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475adb4434c69903%3A0x1a37cddca9bd173f!2sEvropa+Ketering!5e0!3m2!1sen!2srs!4v1549765948408" width="523" height="308" frameborder="0" style="border:0" allowfullscreen></iframe>
+       
+       
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 mt-3 embed-responsive embed-responsive-16by9">
+                                      <!--Ubaciti mapu ovde - dodao Dragan-->
+                            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2802.6805093835587!2d20.395372515554524!3d45.37544177910007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475adb4434c69903%3A0x1a37cddca9bd173f!2sEvropa+Ketering!5e0!3m2!1sen!2srs!4v1549765948408" width="523" height="308" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
-
-                  </div>
-                  <br>
-                  <h5 class="text-center text-info">Hvala Vam na ukazanom poverenju.</h5>
-             </div>
-        </div>
-      </main>
-      <footer>
-        <p>
-          Pre nego što nas kontaktirate, proverite da li smo mi prava kompanija za Vas!
-          <a href="o-nama.html">Ko smo mi?</a>
-        </p>
-        <p>Copyright &copy 2019</p>
-      </footer>
-
-</div>
-
-
+       
+                    </div>
+                         <br>
+                         <h5 class="text-center text-info">Hvala Vam na ukazanom poverenju.</h5>
+                
+            </div>
+        </main>
+        <footer>
+          <p>
+            Pre nego što nas kontaktirate, proverite da li smo mi prava kompanija za Vas!
+            <a href="o-nama.html">Ko smo mi?</a>
+          </p>
+          <p>Copyright &copy 2019</p>
+        </footer>
+    </div>
 </body>
 
 </html>

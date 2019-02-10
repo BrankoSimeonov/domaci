@@ -27,28 +27,26 @@ h1,h2,h3,h4,h5,h6 {
 header {
     background: url(images/header.jpg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
-/* napravljena izmena od strane Nikole, stavio sam padding sva svih strana posto je bilo sve zalepljeno */
 header img {
     padding: 20px;
 }
 
-/* Nikola, opacity na background naslov */
 h1 {
     font-weight: 400;
     font-size: 3rem;
     letter-spacing: 1px;
-    background: rgba(0,123,255, 0.9);
+    background:#007bff;
     padding: 3px;
     color:#fff;
     border-radius: 10px;
     margin-bottom: 5px;;
 }
-/* Nikola, opacity na background naslov */
+
 .podnaslov {
-    background: rgba(23,162,184,0.9);
+    background: #17a2b8;
     border-radius: 10px;
     color:#fff;
     font-size: 1.5rem;
@@ -76,18 +74,18 @@ nav li {
 /* FOOTER - Filip apdejtovao*/
 
 footer {
-    background:#007bff;
+    background: #007bff;
     color:#fff;
     padding: 10px;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
-    border-top: 3px solid #282828;
+    border-top: 3px solid #292929;
     text-align: center;
     font-size: 2.4vh;
     margin-top: 2vh;
 }
 footer a{
-  color: #282828;
+  color: #292929;
   font-weight: bold;
 }
 footer a:hover{
@@ -377,6 +375,8 @@ input[type=text]:placeholder {
     width: 30%;
 }
 /*dusan*/
+
+/* stranica Pomoc */
 .pomoc{
     text-align: center;
     background-color: transparent;
@@ -401,25 +401,89 @@ input[type=text]:placeholder {
 #cards{
     width: 50px;
 }
-/*kontakt strana za image hover, Vele*/
-/* NIKOLA JE NAPRAVIO IZMENU KAKO BI SREDIO HEADER, DODAT JE ID ISPRED SLIKA KOJE SU SAMO TREBALE BITI GADJANE NA KONTAKT STRANI, iako bi to trebalo da je klasa jer jedan isti ID se ne stavlja na vise stvari. */
-#home img {
-    height: 50px;
-    width: 50px;
+/* kraj stranice Pomoc */
+
+
+/* search u headeru */
+.search-box
+{
+  transform: translate(-5%);
 }
 
-#home {
-    cursor: pointer;
+.search-box input[type="text"] {
+  padding: 3px;
+  padding-left: 3px;
+  border: none;
+  margin: 10px;
+  background: none;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  transition: all .25s ease-in .25s;
+  color: transparent;
+  font-size: 1.5rem;
+  line-height: 30px;
+  text-align: left;
 }
-.image_off, #home:hover .image_on{
-    display:none
- }
- .image_on, #home:hover .image_off{
-    display:block
- }
 
+.search-box ::placeholder
+{
+  position: relative;
+  top: 0;  
+  left:-2px;
+  color: white;
+}
 
- /* ---------------------------- */
+.search-box input[type="text"]:hover {
+  cursor: pointer;
+}
+.search-box input[type="text"]:hover:focus {
+  cursor: text;
+}
+.search-box input[type="text"]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type="text"]:focus {
+  width: 300px;
+  outline: none;
+  color: white;
+  background: none;
+  color: white;
+}
+.search-box input[type="text"]:focus + span {
+  width: 300px;
+}
+.search-box input[type="text"]:focus + span::before {
+  width: 5px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+.search-box input[type="text"] + span {        /*   krug na lupi */
+  z-index: -1;
+  position: absolute;
+  border: 5px solid white;
+  top: 15%;
+  right: 1%;
+  width: 45px;
+  height: 45px;
+  transition: all .25s ease-in .25s;
+  border-radius: 35px;
+  left: 0;
+}
+.search-box input[type="text"] + span::before {       /*   crtica na lupi  */
+  transition: all .25s ease-in .5s;
+  transform-origin: left center;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(40px, 3px);
+}
+/* kraj searcha */
+
+/* ---------------------------- */
 /* Dragan */
 /* Animirani buttoni */
 .animbutton{
@@ -466,3 +530,61 @@ input[type=text]:placeholder {
 .animbutton:hover:after{
     top:0;
 }
+
+.social{
+    display: inline;
+}
+
+.social a{
+    font-size: 2em;
+    padding: 1rem;
+  }
+  .fa-facebook{
+    color: #3b5998;
+  }
+  .fa-twitter{
+    color: #00aced;
+  }
+  .fa-google-plus-g{
+    color: #dd4b39;
+  }
+  .fa-instagram{
+    color: #517fa4;
+  }
+  .fa-youtube{
+    color: #bb0000;
+  }
+  .fa-facebook:hover, 
+  .fa-twitter:hover, 
+  .fa-google-plus-g:hover, 
+  .fa-instagram:hover,
+  .fa-youtube:hover{
+    color: #d5d5d5
+  }
+    
+}
+
+@media (min-width: 576px ){
+    h1{
+        font-size: 1.5rem;
+    } 
+    .podnaslov{
+        font-size: 1rem; 
+    }
+ }
+ @media (min-width: 768px ){
+    h1{
+        font-size: 2rem;
+    } 
+    .podnaslov{
+        font-size: 1.1rem; 
+    }
+ }
+ @media (min-width: 992px ){
+    h1{
+        font-size: 2.5rem;
+    } 
+    .podnaslov{
+        font-size: 1.2rem; 
+    }
+ }
