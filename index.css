@@ -401,3 +401,83 @@ input[type=text]:placeholder {
     width: 50px;
 }
 /* kraj stranice Pomoc */
+
+
+/* search u headeru */
+.search-box
+{
+  transform: translate(-5%);
+}
+
+.search-box input[type="text"] {
+  padding: 3px;
+  padding-left: 3px;
+  border: none;
+  margin: 10px;
+  background: none;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  transition: all .25s ease-in .25s;
+  color: transparent;
+  font-size: 1.5rem;
+  line-height: 30px;
+  text-align: left;
+}
+
+.search-box ::placeholder
+{
+  position: relative;
+  top: 0;  
+  left:-2px;
+  color: white;
+}
+
+.search-box input[type="text"]:hover {
+  cursor: pointer;
+}
+.search-box input[type="text"]:hover:focus {
+  cursor: text;
+}
+.search-box input[type="text"]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type="text"]:focus {
+  width: 300px;
+  outline: none;
+  color: white;
+  background: none;
+  color: white;
+}
+.search-box input[type="text"]:focus + span {
+  width: 300px;
+}
+.search-box input[type="text"]:focus + span::before {
+  width: 5px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+.search-box input[type="text"] + span {        /*   krug na lupi */
+  z-index: -1;
+  position: absolute;
+  border: 5px solid white;
+  top: 15%;
+  right: 1%;
+  width: 45px;
+  height: 45px;
+  transition: all .25s ease-in .25s;
+  border-radius: 35px;
+  left: 0;
+}
+.search-box input[type="text"] + span::before {       /*   crtica na lupi  */
+  transition: all .25s ease-in .5s;
+  transform-origin: left center;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(40px, 3px);
+}
+/* kraj searcha */

@@ -57,7 +57,7 @@ function data(){
         ctx.strokeStyle = gradient;
         ctx.strokeText("FrontEnd", 20, 90);
         ctx.strokeText("Developer", 20, 240);
-        ctx.strokeText("Team ZR", 20, 390);    
+        ctx.strokeText("Team ZR ®", 20, 390);    
 
     document.getElementById("logo").style.display = "block";                            // palim logo i tekst pored njega
     document.getElementById("frontend").style.display = "block";
