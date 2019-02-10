@@ -18,6 +18,8 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
+    <!--ScrollReveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
 <style>
     @media (min-width: 576px ){
        h3{
@@ -265,6 +267,14 @@
 
         </footer>
     </div>
+
+    <script>
+        ScrollReveal().reveal('.gallery_product',{
+            delay:300,
+            distance: '15%',
+            origin: 'bottom',
+        });
+    </script>
 </body>
 
 </html>
