@@ -55,7 +55,7 @@ function data(){
         gradient.addColorStop("1.0", "orange");
         // Fill with gradient
         ctx.strokeStyle = gradient;
-        ctx.strokeText("FrontEnd", 20, 90);
+        ctx.strokeText("Front End", 20, 90);
         ctx.strokeText("Developer", 20, 240);
         ctx.strokeText("Team ZR ®", 20, 390);    
 
