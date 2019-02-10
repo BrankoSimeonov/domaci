@@ -26,7 +26,8 @@ function data(){
     document.getElementById("login").style.display = "none";          // sakrivam login
     document.getElementById("docek").style.backgroundImage = "url('images/electronics.png')";    //  stavljam background image
         
-    document.getElementById("klijent").innerHTML = " ";                     
+    document.getElementById("klijent").innerHTML = " ";  
+    document.getElementById("klijent").style.color = "orange";                   
     var string = " "+ime+" "+prezime+" ";
     var str = string.split("");
     var el = document.getElementById('klijent');                                        //  funkcija koja animira ispis imena i prezimena 
