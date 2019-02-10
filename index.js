@@ -32,16 +32,28 @@ function data(){
     var el = document.getElementById('klijent');                                        //  funkcija koja animira ispis imena i prezimena 
     (function animate() {                      
         str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running);      
-        var running = setTimeout(animate, 100);})();
+        var running = setTimeout(animate, 70);})();
     
     document.getElementById("poruka").innerHTML = " ";                     
-    var string1 = " Navigaciju možete vršiti pomoću linkova IZNAD, po završenoj kupovini u odeljku korpa pritikom na 'poruči' biće vam poslat e-mail na: "+email+" Hvala Vam što nam pomažete da razvijemo ovaj softwer... ";
+    var string1 = " Navigaciju možete vršiti pomoću linkova IZNAD, po završenoj kupovini u odeljku korpa pritikom na 'poruči' biće vam poslat e-mail na: "+email;
     var str1 = string1.split("");
     var el1 = document.getElementById('poruka');                                        //  funkcija koja animira ispis poruke na prvoj strani posle logina
     (function animate() {                      
         str1.length > 0 ? el1.innerHTML += str1.shift() : clearTimeout(running1);      
         var running1 = setTimeout(animate, 5);})();
-    
+
+    document.getElementById("poruka2").innerHTML = " ";
+    document.getElementById("poruka2").style.color = "orange";                     
+    var string2 = " Hvala Vam što nam pomažete da razvijemo ovaj softwer... ";
+    var str2 = string2.split("");
+    var el2 = document.getElementById('poruka2');                                        //  funkcija koja animira ispis poruke na prvoj strani posle logina
+    (function animate() {                      
+        str2.length > 0 ? el2.innerHTML += str2.shift() : clearTimeout(running2);      
+        var running2 = setTimeout(animate, 15);})();
+
+
+
+
         var c = document.getElementById("myCanvas");                                    //   tekst sa dene strane logoa
         var ctx = c.getContext("2d");
         ctx.shadowBlur = 50;
