@@ -59,7 +59,7 @@ function data(){
         ctx.shadowBlur = 50;
         ctx.shadowColor = "white";
         ctx.lineWidth = 2;
-        ctx.font = "90px Anton";
+        ctx.font = "5vw Anton";
         // Create gradient
         var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
         gradient.addColorStop("0", "orange");
