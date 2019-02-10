@@ -33,6 +33,7 @@ header {
 header img {
     padding: 20px;
 }
+
 /* Nikola, opacity na background naslov */
 h1 {
     font-weight: 400;
@@ -375,7 +376,30 @@ input[type=text]:placeholder {
     width: 30%;
 }
 /*dusan*/
-
+.pomoc{
+    text-align: center;
+    background-color: transparent;
+    margin-top: 15px;
+}
+.pregled{
+    width: 120px;
+    padding-left: 15px;
+    text-align: center;
+}
+#uplatnica{
+    transition: transform .3s;
+    width: 300px;
+}
+#uplatnica:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    width: 700px;
+    padding-left: 150px;
+}
+#cards{
+    width: 50px;
+}
 /*kontakt strana za image hover, Vele*/
 /* NIKOLA JE NAPRAVIO IZMENU KAKO BI SREDIO HEADER, DODAT JE ID ISPRED SLIKA KOJE SU SAMO TREBALE BITI GADJANE NA KONTAKT STRANI, iako bi to trebalo da je klasa jer jedan isti ID se ne stavlja na vise stvari. */
 #home img {
