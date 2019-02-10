@@ -29,23 +29,24 @@ header {
     background-size: 100%;
 }
 
+/* napravljena izmena od strane Nikole, stavio sam padding sva svih strana posto je bilo sve zalepljeno */
 header img {
-    padding-bottom: 20px;
+    padding: 20px;
 }
-
+/* Nikola, opacity na background naslov */
 h1 {
     font-weight: 400;
     font-size: 3rem;
     letter-spacing: 1px;
-    background:#007bff;
+    background: rgba(0,123,255, 0.9);
     padding: 3px;
     color:#fff;
     border-radius: 10px;
     margin-bottom: 5px;;
 }
-
+/* Nikola, opacity na background naslov */
 .podnaslov {
-    background: #17a2b8;
+    background: rgba(23,162,184,0.9);
     border-radius: 10px;
     color:#fff;
     font-size: 1.5rem;
@@ -376,11 +377,12 @@ input[type=text]:placeholder {
 /*dusan*/
 
 /*kontakt strana za image hover, Vele*/
-
-img {
+/* NIKOLA JE NAPRAVIO IZMENU KAKO BI SREDIO HEADER, DODAT JE ID ISPRED SLIKA KOJE SU SAMO TREBALE BITI GADJANE NA KONTAKT STRANI, iako bi to trebalo da je klasa jer jedan isti ID se ne stavlja na vise stvari. */
+#home img {
     height: 50px;
     width: 50px;
 }
+
 #home {
     cursor: pointer;
 }
