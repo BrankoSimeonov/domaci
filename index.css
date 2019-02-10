@@ -102,8 +102,9 @@ footer a:hover{
 
 /* Goran, font za ime i prezime */
 #klijent{
-    font-family: 'Marck Script', cursive;
+    font-family: 'Allura', cursive;
     font-size: xx-large;
+    font-weight: bold;
 }
 
 
