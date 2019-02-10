@@ -70,13 +70,29 @@ nav li {
     font-size: 2rem;
 }
 
-/* FOOTER */
+/* FOOTER - Filip apdejtovao*/
 
 footer {
-    background: #666;
+    background:#007bff;
     color:#fff;
     padding: 10px;
-    border-radius: 5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-top: 3px solid #282828;
+    text-align: center;
+    font-size: 2.4vh;
+    margin-top: 2vh;
+}
+footer a{
+  color: #282828;
+  font-weight: bold;
+}
+footer a:hover{
+  color: white;
+  text-decoration: none;
+}
+#korpaFooter {
+  margin-top: 20vh;
 }
 
 
