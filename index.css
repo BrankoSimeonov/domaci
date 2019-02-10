@@ -539,7 +539,7 @@ input[type=text]:placeholder {
     top:0;
 }
 
-.social{
+/* .social{
     display: inline;
 }
 
@@ -568,8 +568,74 @@ input[type=text]:placeholder {
   .fa-instagram:hover,
   .fa-youtube:hover{
     color: #d5d5d5
+  } */
+  /* soc */
+.soc {
+    display:flex;
+    list-style: none;
+    text-align: center;
   }
-    
+  .soc li {
+    display: inline-block;
+  }
+  .soc a, .soc svg {
+    display: block;
+  }
+  .soc a {
+    position: relative;
+    height: 66px;
+    height: 4rem;
+    width: 66px;
+    width: 4rem;
+  }
+  .soc svg {
+    height: 100%;
+    width: 100%;
+  }
+  .face:hover, .inst:hover, .twit:hover, .you:hover, .linkd:hover {
+    border-radius: 100%;
+    color: #0e1a25;
+    fill: #0e1a25;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  }
+.face {
+  color: #3b5998;
+  fill: #3b5998;
+}
+.face:hover {
+  background: #3b5998;
+}
+.inst {
+  color: #26d9d9;
+  fill: #26d9d9;
+}
+.inst:hover {
+  background: #26d9d9;
+}
+.twit {
+  color: #38A1F3;
+  fill: #38A1F3;
+}
+.twit:hover {
+  background: #38A1F3;
+}
+.you {
+  color: #ff0000;
+  fill: #ff0000;
+}
+.you:hover {
+  background: #ff0000;
+}
+.linkd {
+  color: #0077B5;
+  fill: #0077B5;
+}
+.linkd:hover {
+  background: #0077B5;
 }
 
 @media (min-width: 576px ){
