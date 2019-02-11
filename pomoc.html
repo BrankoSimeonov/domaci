@@ -114,7 +114,17 @@
                     <ul>Prilikom kupovine u mogućnosti ste da odaberete:
                         <li>plaćanje pouzećem gotovinski u trenutku isporuke</li>
                         <li>uplatnicom u pošti ili banci:</li>
-                        <span><img id="uplatnica" src="images/uplatnica.png" alt="popunjena uplatnica"></span>
+                        <!--Izmenjen hover sa funckijom na klik-->
+                        <span><img id="uplatnica" src="images/uplatnica.png" alt="popunjena uplatnica" style="width:50%;max-width:300px">
+                            <!-- The Modal -->
+                         <div id="myModal" class="modal">
+                             <span class="close">&times;</span>
+                            <img class="modal-content" id="img01">
+                             <div id="caption"></div>
+                         </div> 
+                         <!--Eksterni JS kod-->
+                         <script src="pomoc.js"></script>
+                         </span>
                         <li>platnim karticama tokom procesa kupovine na sajtu</li>
                             <a href="#"><img id="cards" src="images/viza.png" alt="mastercard"></a>
                             <a href="#"><img id="cards" src="images/dinacard.png" alt="mastercard"></a>
