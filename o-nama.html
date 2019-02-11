@@ -1,0 +1,418 @@
+<!doctype html>
+
+<html lang="sr">
+
+<head>
+
+    <title>Mala prodavnica elektornike - O nama</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Distribucija i prodaja na veliko i malo elektronskih komponenti">
+    <meta name="author" content="FrontEnd Zrenjanin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!--ScrollReveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+<style>
+    @media (min-width: 576px ){
+       h3{
+           font-size: 150%;
+       } 
+    }
+    @media (min-width: 768px ){
+       h3{
+           font-size: 150%;
+       } 
+    }
+    @media (min-width: 992px ){
+       h3{
+           font-size: 150%;
+       } 
+    }
+
+    /* css za rotiranje slika u galeriji */
+    .flip-card {
+        background-color: transparent;
+        width: 350px;
+        height: 350px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+}
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1.8s;
+        transform-style: preserve-3d;
+}
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+}
+
+/* Pozicija prednje i zadnje strane */
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+}
+
+/* Prednja strana */
+    .flip-card-front {
+        background-color: #bbb;
+        color: black;
+        box-shadow: -8px 8px 8px rgb(0,0,0,0.2);
+
+}
+
+/* Zadnja strana */
+    .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+        box-shadow: -8px 8px 8px rgb(0,0,0,0.2);
+
+}
+
+
+/* UNUTRASNJA KOLONA GALERIJE */
+
+
+.flip-card-x {
+        background-color: transparent;
+        width: 350px;
+        height: 350px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+    .flip-card-inner-x {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 1.8s;
+        transform-style: preserve-3d;
+}
+
+    .flip-card-x:hover .flip-card-inner-x {
+        transform: rotateX(180deg);
+}
+
+/* Pozicija prednje i zadnje strane */
+
+    .flip-card-front-x, .flip-card-back-x {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+}
+
+/* Prednja strana */
+    .flip-card-front-x {
+        background-color: #bbb;
+        color: black;
+        box-shadow: 8px 8px 8px rgb(0,0,0,0.2),-8px 8px 8px rgb(0,0,0,0.2);
+
+}
+
+/* Zadnja strana */
+    .flip-card-back-x {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateX(180deg);
+        box-shadow: 8px 8px 8px rgb(0,0,0,0.2),-8px 8px 8px rgb(0,0,0,0.2);
+
+}
+
+/* DESNA KOLONA GELERIJE*/
+
+.senka {
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2)
+}
+
+</style>
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript -->
+    <!-- jQuery deo i Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- Js kod -->
+    <script src="js/scripts.js"></script>
+    <div class="container">
+        <header>
+            <!-- Header podeljen u tri dela -->
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 prvi">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.png" width="150" alt="prodavnica logo">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center">
+                    <h1 class="display-5">Internet prodavnica</h1>
+                    <div class="display-6 podnaslov">Elektronskih komponenti</div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center treci">
+                    <img src="images/norton.png" width="200" alt="prodavnica logo">
+                </div>
+            </div>
+            <!-- Navigacija u bootstrapu-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#prodavnica1"
+                        aria-controls="prodavnica1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="prodavnica1">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Početna</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="katalog.html">Katalog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="korpa.html">Korpa</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="o-nama.html">O nama<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pomoc.html">Pomoc</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="search-box">
+                            <input  type="text"  placeholder="&#x1F440">
+                            <span></span>
+                        </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <!-- Ovde upisati vas deo -->
+
+            
+                <div class="row">
+                    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h1 class="gallery-title text-center mt-3">NAS TIM</h1>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-3 text-center  ">
+                        <h3 class="text-center">Aleksandar Đorđević</h3>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                                </div>
+                            <div class="flip-card-back">
+                                <h1>Predavac</h1> 
+                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                <p class="mb-5">Detalji o radu</p>
+                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Aleksandra</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-3 text-center">
+                        <h3 class="text-center">Supervizor</h3>
+                        <div class="flip-card-x">
+                            <div class="flip-card-inner-x">
+                                <div class="flip-card-front-x">
+                                    <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                                </div>
+                                <div class="flip-card-back-x">
+                                    <h1>Supervizor</h1> 
+                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                    <p class="mb-5">Detalji o radu</p>
+                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Asistenkinju</button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-3 text-center">
+                        <h3 class="text-center">Branko Simeonov</h3>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front senka">
+                                    <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                                </div>
+                                <div class="flip-card-back senka">
+                                    <h1>Organizator</h1> 
+                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                    <p class="mb-5">Detalji o radu</p>
+                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Branka</button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation text-center">
+                        <h3 class="text-center">Konstruktor(tesar)</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Petar</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter spray text-center">
+                        <h3 class="text-center">Dizajn(moler)</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Nikola</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation text-center">
+                        <h3 class="text-center">Abakus(Kalkulant)</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Goran</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter spray text-center">
+                        <h3 class="text-center">Ucesnik 665421</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Bojan</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation text-center">
+                        <h3 class="text-center">Ucesnik 665547</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Zorana</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation text-center">
+                        <h3 class="text-center">Ucesnik 554477</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Sale</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe text-center">
+                        <h3 class="text-center">Guru</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Dule</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter spray text-center">
+                        <h3 class="text-center">Neli</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Neli</p>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 665524</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Velimir</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 664244</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Dragan</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 665124</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Velemir</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 662314</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Milica</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 465224</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Monika</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 524224</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Miroslav</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 621784</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Ognjen</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 654214</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Verica</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 789084</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Filip</p>
+                    </div>
+                    <div class="gallery_product col-xl-4 col-lg-12 col-md-12 col-sm-12 col-xs-12 filter sprinkle text-center">
+                        <h3 class="text-center">Ucesnik 602479</h3>
+                        <img src="http://fakeimg.pl/365x365/" class="img-thumbnail">
+                        <p class="text-center">Marko</p>
+                    </div>
+
+
+                    <hr>
+                    <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                            <h3 class="text-center">Kreator h3 i p tekstova</h3>
+                            <img src="http://fakeimg.pl/250x250/" class="img-thumbnail">
+                            <p class="text-center">Goran</p>
+                        </div>
+                        <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                                <h3 class="text-center">Organizator stranice O  nama</h3>
+                                <img src="http://fakeimg.pl/250x250/" class="img-thumbnail">
+                                <p class="text-center">Milan</p>
+                            </div>
+                            <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                                    <h3 class="text-center">Fotografija, slika, video, ton</h3>
+                                    <img src="http://fakeimg.pl/250x250/" class="img-thumbnail">
+                                    <p class="text-center">Vuk</p>
+                                </div>
+                                <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle text-center">
+                                        <h3 class="text-center">WordPress 'ajduk master </h3>
+                                        <img src="http://fakeimg.pl/250x250/" class="img-thumbnail">
+                                        <p class="text-center">Sale</p>
+                                    </div>
+                </div>
+            
+
+        </main>
+        <footer>
+          <p>Da li ste se upoznali i sa našim proizvodima?
+          <a href="katalog.html"> Pogledaj katalog.</a>
+          </p>
+          <p>Copyright &copy 2019</p>
+
+        </footer>
+    </div>
+
+    <script>
+        ScrollReveal().reveal('.gallery_product',{
+            delay:300,
+            distance: '15%',
+            origin: 'bottom',
+        });
+    </script>
+</body>
+
+</html>

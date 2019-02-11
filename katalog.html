@@ -1,0 +1,222 @@
+<!doctype html>
+
+<html lang="sr">
+
+<head>
+
+    <title>Mala prodavnica elektornike - Katalog</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Distribucija i prodaja na veliko i malo elektronskih komponenti">
+    <meta name="author" content="FrontEnd Zrenjanin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Js kod za katalog -->
+    <script src="katalog.js"></script>
+    <script>window.onload = run</script>
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript -->
+    <!-- jQuery deo i Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <div class="container">
+        <header>
+            <!-- Header podeljen u tri dela -->
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 prvi">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.png" width="150" alt="prodavnica logo">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center">
+                    <h1 class="display-5">Internet prodavnica</h1>
+                    <div class="display-6 podnaslov">Elektronskih komponenti</div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center treci">
+                    <img src="images/norton.png" width="200" alt="prodavnica logo">
+                </div>
+            </div>
+            <!-- Navigacija u bootstrapu-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#prodavnica1"
+                        aria-controls="prodavnica1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="prodavnica1">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Početna</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="katalog.html">Katalog<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="korpa.html">Korpa</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="o-nama.html">O nama</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pomoc.html">Pomoc</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-box">
+                        <input  type="text"  placeholder="&#x1F440">
+                        <span></span>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Glavna sekcija -->
+            <div class="card">
+                <div class="card-body">
+                    Dobrodosli,<h4 id="kupac"></h4>
+                </div>
+            </div>
+
+
+            <table>
+                <tr>
+                    <form id="forma">
+                        <td><img src="images/otpornik.png"></td>
+                        <td><input type="text" disabled value="otpornik" size="10" id="vrsta"></td>
+                        <td><select id="tip" onChange="funkcija()">
+                                <option value="0" selected>izaberite artikl</option>
+                                <option value="100r">100R</option>
+                                <option value="120r">120R</option>
+                                <option value="1k">1K</option>
+                                <option value="10k">10K</option>
+                                <option value="100k">100K</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada"
+                                onclick="funkcija()" onChange="funkcija()"></td>
+                        <td><input type="text" disabled value="cena po komadu" id="cena"></td>
+                        <td><input type="text" disabled value="ukupno" id="ukupno"></td>
+                    <!--    <td><input type="button" id="korpa1" disabled value="dodaj u korpu" onclick="locstormake()"></td> -->
+                        <td>
+                            <button id="korpa1" class="animbutton" disabled onclick="locstormake()">Dodaj u korpu</button>
+                        </td>
+                    </form>
+                </tr>
+
+                <tr>
+                    <form id="forma2">
+                        <td><img src="images/elektrolitskikondenzator.png"></td>
+                        <td><input type="text" disabled value="kondenzator" size="10" id="vrsta2"></td>
+                        <td><select id="tip2" onChange="funkcija2()">
+                                <option value="0" selected>izaberite artikl</option>
+                                <option value="100uF">100uF</option>
+                                <option value="220uF">220uF</option>
+                                <option value="470uF">470uF</option>
+                                <option value="1000uF">1000uF</option>
+                                <option value="2200uF">2200uF</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada2"
+                                onclick="funkcija2()" onChange="funkcija2()"></td>
+                        <td><input type="text" disabled value="cena po komadu" id="cena2"></td>
+                        <td><input type="text" disabled value="ukupno" id="ukupno2"></td>
+                    <!--   <td><input type="button" id="korpa2" disabled value="dodaj u korpu" onclick="locstormake2()"></td> -->
+                        <td>
+                            <button id="korpa2" class="animbutton" disabled onclick="locstormake2()">Dodaj u korpu</button>
+                        </td>
+                    </form>
+                </tr>
+
+                <tr>
+                    <form id="forma3">
+                        <td><img src="images/dioda.png"></td>
+                        <td><input type="text" disabled value="dioda" size="10" id="vrsta3"></td>
+                        <td><select id="tip3" onChange="funkcija3()">
+                                <option value="0" selected>izaberite artikl</option>
+                                <option value="1N4007">1N4007</option>
+                                <option value="1N5404">1N5404</option>
+                                <option value="1N5408">1N5408</option>
+                                <option value="25F120M">25F120M</option>
+                                <option value="40HFR100M">40HFR100M</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada3"
+                                onclick="funkcija3()" onChange="funkcija3()"></td>
+                        <td><input type="text" disabled value="cena po komadu" id="cena3"></td>
+                        <td><input type="text" disabled value="ukupno" id="ukupno3"></td>
+                    <!--    <td><input type="button" id="korpa3" disabled value="dodaj u korpu" onclick="locstormake3()"></td> -->
+                        <td>
+                            <button id="korpa3" class="animbutton" disabled onclick="locstormake3()">Dodaj u korpu</button>
+                        </td>
+                    </form>
+                </tr>
+
+                <tr>
+                    <form id="forma4">
+                        <td><img src="images/tranzistor.png"></td>
+                        <td><input type="text" disabled value="tranzistor" size="10" id="vrsta4"></td>
+                        <td><select id="tip4" onChange="funkcija4()">
+                                <option value="0" selected>izaberite artikl</option>
+                                <option value="2N2222A">2N2222A</option>
+                                <option value="2N3439">2N3439</option>
+                                <option value="BC547">BC547</option>
+                                <option value="2SA1943">2SA1943</option>
+                                <option value="2SA1943">2SA1943</option>
+                            </select>
+                        </td>
+                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada4"
+                                onclick="funkcija4()" onChange="funkcija4()"></td>
+                        <td><input type="text" disabled value="cena po komadu" id="cena4"></td>
+                        <td><input type="text" disabled value="ukupno" id="ukupno4"></td>
+                     <!--   <td><input type="button" id="korpa4" disabled value="dodaj u korpu" onclick="locstormake4()"></td> -->
+                        <td>
+                            <button id="korpa4" class="animbutton" disabled onclick="locstormake4()">Dodaj u korpu</button>
+                        </td>
+                    </form>
+                </tr>
+            </table>
+        <!--    <input type="button" value="Idi na kasu" onclick=" location.href = 'korpa.html' , send() "> -->
+            <div class="kasa">
+                <button class="cta" onclick=" location.href = 'korpa.html' , send() ">
+                    <span>Idi na kasu</span>
+                    <span>
+                        <svg width="66px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                        </g>
+                        </svg>
+                    </span>
+                </button>
+            </div> 
+
+        </main>
+        <footer>
+          <p>Pronašli ste odgovarajući artikal?
+          <a href="index.html">Registrujte se za početak kupovine!</a></p>
+          <p>Copyright &copy 2019</p>
+         </footer>
+    </div>
+</body>
+
+</html>
