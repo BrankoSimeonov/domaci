@@ -1,1 +1,1 @@
-Ovo je master ne drkaj
+# domaci
