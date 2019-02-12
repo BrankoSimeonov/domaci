@@ -97,11 +97,20 @@
             </div>
 
 
-            <table>
+            <table class="text-center m-0 p-0">
+                <tr class="table table-warning">
+                    <th>Slika</th>
+                    <th>Proizvod</th>
+                    <th>Tip</th>
+                    <th>Broj komada</th>
+                    <th>Cena po komadu</th>
+                    <th>Ukupna cena</th>
+                    <th></th>
+                </tr>
                 <tr>
                     <form id="forma">
                         <td><img src="images/otpornik.png"></td>
-                        <td><input type="text" disabled value="otpornik" size="10" id="vrsta"></td>
+                        <td><input type="text" disabled value="otpornik" id="vrsta"></td>
                         <td><select id="tip" onChange="funkcija()">
                                 <option value="0" selected>izaberite artikl</option>
                                 <option value="100r">100R</option>
@@ -111,7 +120,7 @@
                                 <option value="100k">100K</option>
                             </select>
                         </td>
-                        <td><input type="number" min="1" placeholder="unesi broj komada" id="komada"
+                        <td><input type="number" min="1" placeholder="unesi količinu" id="komada"
                                 onclick="funkcija()" onChange="funkcija()"></td>
                         <td><input type="text" disabled value="cena po komadu" id="cena"></td>
                         <td><input type="text" disabled value="ukupno" id="ukupno"></td>
@@ -125,7 +134,7 @@
                 <tr>
                     <form id="forma2">
                         <td><img src="images/elektrolitskikondenzator.png"></td>
-                        <td><input type="text" disabled value="kondenzator" size="10" id="vrsta2"></td>
+                        <td><input type="text" disabled value="kondenzator" id="vrsta2"></td>
                         <td><select id="tip2" onChange="funkcija2()">
                                 <option value="0" selected>izaberite artikl</option>
                                 <option value="100uF">100uF</option>
@@ -149,7 +158,7 @@
                 <tr>
                     <form id="forma3">
                         <td><img src="images/dioda.png"></td>
-                        <td><input type="text" disabled value="dioda" size="10" id="vrsta3"></td>
+                        <td><input type="text" disabled value="dioda"  id="vrsta3"></td>
                         <td><select id="tip3" onChange="funkcija3()">
                                 <option value="0" selected>izaberite artikl</option>
                                 <option value="1N4007">1N4007</option>
@@ -173,7 +182,7 @@
                 <tr>
                     <form id="forma4">
                         <td><img src="images/tranzistor.png"></td>
-                        <td><input type="text" disabled value="tranzistor" size="10" id="vrsta4"></td>
+                        <td><input type="text" disabled value="tranzistor"  id="vrsta4"></td>
                         <td><select id="tip4" onChange="funkcija4()">
                                 <option value="0" selected>izaberite artikl</option>
                                 <option value="2N2222A">2N2222A</option>

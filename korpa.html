@@ -11,6 +11,9 @@
     <meta name="author" content="FrontEnd Zrenjanin">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- Js kod  - mora ovde da stoji -->
+    <script src="korpa.js"></script>
+    <script>window.onload = start</script>
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -18,9 +21,7 @@
         crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="index.css">
-        <!-- Js kod  - mora ovde da stoji -->
-    <script src="korpa.js"></script>
-    <script>window.onload = start</script>
+
 </head>
 
 <body>
@@ -96,15 +97,18 @@
 
         <!--Sredjena tabela korpe-->
 
-        <table id="pText" class="table">
+        <table  class="table  table-striped ">
+            <thead class="table-warning">
             <tr>
-                <th>Redni broj</th>
-                <th>Proizvod</th>
-                <th>Tip</th>
-                <th>Broj komada</th>
-                <th>Cena po komadu</th>
-                <th>Ukupna cena</th>
+                <th scope="col">Redni broj</th>
+                <th scope="col">Proizvod</th>
+                <th scope="col">Tip</th>
+                <th scope="col">Broj komada</th>
+                <th scope="col">Cena po komadu</th>
+                <th scope="col">Ukupna cena</th>
             </tr>
+            </thead>
+            <tbody id="pText"></tbody>
         </table>
         <hr>
         <p id="total"></p>
