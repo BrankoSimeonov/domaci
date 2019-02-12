@@ -41,25 +41,25 @@ header img {
   to {
     background-position: -100% 0; } }
 
-h1 {
+header h1 {
     font-weight: 400;
     font-size: 3rem;
+    color:#007bff;
+    margin-bottom: -2px;
+    opacity: 0.8;
     letter-spacing: 1px;
-    background:#007bff;
-    padding: 3px;
-    color:#fff;
-    border-radius: 10px;
-    margin-bottom: 5px;;
 }
 
-.podnaslov {
-    background: #17a2b8;
-    border-radius: 10px;
-    color:#fff;
+
+header .podnaslov {
+    color:#17a2b8;
     font-size: 1.5rem;
     font-weight: 400;
     padding: 3px;
     margin: 0 100px;
+    opacity: 0.7;
+    font-style: italic;
+    letter-spacing: 1px;
 }
 
 /* NAVIGATION SECTION */
@@ -1036,6 +1036,15 @@ path.two {
 /* DESNA KOLONA GELERIJE*/
 .senka {
 box-shadow: 8px 8px 8px rgb(0,0,0,0.2)
+}
+
+/* NIKOLA UBACIO NOVU KLASU U HTML-U ZA NASLOV "Nas Tim" */
+
+.tim {
+  font-family: "Dosis";
+  color:#17a2b8;
+  font-style: italic;
+  font-size: 3rem;
 }
 
 /* KRAJ STRANICE O NAMA */
