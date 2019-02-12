@@ -25,14 +25,21 @@ h1,h2,h3,h4,h5,h6 {
 /* HEADER SECTION */
 
 header {
-    background: url(images/header.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url("images/clouds.jpg");
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: cloud 50s linear infinite reverse;
 }
 
 header img {
     padding: 20px;
 }
+
+@keyframes cloud {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -100% 0; } }
 
 h1 {
     font-weight: 400;
