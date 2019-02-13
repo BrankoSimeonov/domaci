@@ -95,9 +95,43 @@
             <!-- Glavna sekcija -->
             <div class="card">
                 <div class="card-body">
-                    Dobrodošli,<h4 id="kupac"></h4>
+                    Dobrodošli,<h4><span id="kupac"></span>
+                    <div id="cart-container">
+                        <div id="cart">
+                            <img src="images/kolica.png"width="40px"onclick="korpa()">
+                        </div>
+                        <span id="itemCount"></span>
+                    </div>
+                </h4>
                 </div>
             </div>
+
+
+
+        <div id="bg_mask">
+          <div id="frontlayer"><br/>
+            <table style="width:100%" id="cartTable"class="text-center m-0 p-0 table-striped">
+                <tr class="table table-warning">
+                    <th>Redni broj</th>
+                    <th>Proizvod</th>
+                    <th>Tip</th>
+                    <th>Broj komada</th>
+                    <th>Cena po komadu</th>
+                    <th>Ukupna cena</th>
+                    <th>Briši</th>
+                </tr>
+            </table>
+            <span id="ispisUkupno"></span>
+            <br>
+            <input type="button" value="Hide front layer" onclick="sakrijKorpu();"/>
+          </div>
+        </div>
+
+
+
+
+
+
 
 
             <table class="text-center m-0 p-0">

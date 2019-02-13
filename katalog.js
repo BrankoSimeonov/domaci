@@ -1,5 +1,6 @@
     var red = [];
     localStorage.clickcount = 0;
+    var total = 0;   
     
     function run(){
         var ime = localStorage.getItem("ime");
@@ -10,7 +11,8 @@
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
             var b = localStorage.clickcount;
-            } 
+            document.getElementById("itemCount").style.display= "block";
+        } 
         var vrsta = document.getElementById("vrsta").value;
         var tip = document.getElementById("tip").value;
         var komada = document.getElementById("komada").value;
@@ -20,12 +22,15 @@
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
         document.getElementById("forma").reset();
         document.getElementById("korpa1").disabled = true;
+        document.getElementById("itemCount").innerHTML = b;
+
     }
  
     function locstormake2(){
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
             var b = localStorage.clickcount;
+            document.getElementById("itemCount").style.display= "block";
             } 
         var vrsta = document.getElementById("vrsta2").value;
         var tip = document.getElementById("tip2").value;
@@ -36,12 +41,14 @@
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
         document.getElementById("forma2").reset();
         document.getElementById("korpa2").disabled = true;
+        document.getElementById("itemCount").innerHTML = b;
     }
 
     function locstormake3(){
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
             var b = localStorage.clickcount;
+            document.getElementById("itemCount").style.display= "block";
             } 
         var vrsta = document.getElementById("vrsta3").value;
         var tip = document.getElementById("tip3").value;
@@ -52,12 +59,14 @@
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
         document.getElementById("forma3").reset();
         document.getElementById("korpa3").disabled = true;
+        document.getElementById("itemCount").innerHTML = b;
     }
 
     function locstormake4(){
         if (localStorage.clickcount) {
             localStorage.clickcount = Number(localStorage.clickcount)+1;
             var b = localStorage.clickcount;
+            document.getElementById("itemCount").style.display= "block";
             } 
         var vrsta = document.getElementById("vrsta4").value;
         var tip = document.getElementById("tip4").value;
@@ -68,6 +77,7 @@
         red.push(b,vrsta,tip,komada,cena,ukupnacena);
         document.getElementById("forma4").reset();
         document.getElementById("korpa4").disabled = true;
+        document.getElementById("itemCount").innerHTML = b;
     }
 
     function funkcija(){
@@ -163,4 +173,76 @@
         localStorage.removeItem("email");
         localStorage.removeItem("red");
         location.reload();
+        }
+
+    function korpa(){
+        var r = 0;                                                  //  pomocna promenljiva sluzi da razdvoji redove, deklarisana i definisana na 0 
+        var y = 0;
+        var total = 0;
+        if (red.length < 6) {                                       //  proveravam da li je ista kupljeno i ako nije izbacujem alert ( ako ima manje od 6 podataka, nije bilo kupovine)
+            alert("Prazna korpa");
+        }
+        else {                                                              //  e ovde pocinje
+            for (x = 0; x < red.length; x = x + 6) {                        // =========================================================================
+                var img = document.createElement('img');
+                img.src = "images/djubre2.png";    
+                var tabela = document.getElementById('cartTable');          
+                var novired = tabela.insertRow(tabela.rows.length);         
+                for (i = 0; i < 7; i = i + 1) {                             
+                    if (i == 5) total = total + parseFloat(red[i + r]);
+                    novired.id = "tr"+(1+y);                
+                    var novacelija  = novired.insertCell(i);
+                    var tekst  = document.createTextNode(red[i + r]); 
+                    var button = document.createElement('input');
+                    if(i==6){
+                        button.id = "d"+(i-5+y);
+                        button.setAttribute('type', 'image');
+                        button.setAttribute('src', 'images/djubre2.png');
+                        button.setAttribute('width','35px')
+                        button.setAttribute('onclick', 'brisiRed(this)');
+                      //  img.onclick = brisiRed();
+                        novacelija.appendChild(button);}
+                    else                                                    
+                        novacelija.appendChild(tekst);                          
+                }
+                r = r + 6;
+                y++;                                                  
+            }
+        }
+    
+        document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total.toFixed(2);
+
+        prikaziKorpu();
+    }
+
+
+    
+    
+
+
+
+
+        function prikaziKorpu() {
+            document.getElementById('bg_mask').style.visibility='visible';
+            document.getElementById('frontlayer').style.visibility='visible';
+          }
+        function sakrijKorpu() {
+            document.getElementById('bg_mask').style.visibility='hidden';
+            document.getElementById('frontlayer').style.visibility='hidden';
+            document.getElementById('cartTable').innerHTML = "";  
+            var naslov = ["Redni broj","Proizvod","Tip","Količina","Jedinična cena","Ukupna cena","Briši"]
+            var tabela = document.getElementById('cartTable');
+            var novired = tabela.insertRow(tabela.rows.length);
+            novired.className  = "table table-warning";
+            for (i = 0; i < 7; i = i + 1) {
+                var novacelija  = novired.insertCell(i);
+                var tekst  = document.createTextNode(naslov[i]);
+                novacelija.appendChild(tekst);           
+            }
+            document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total;
+        }
+
+
+        function brisiRed(id){
+    alert("caller is "+id.id );
         }
