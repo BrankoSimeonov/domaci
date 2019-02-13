@@ -88,3 +88,11 @@ function data(){
                     }
                 form.value = velikoslovo;}
             }
+function logout(){     // logout funkcija
+    check = false;
+    sessionStorage.setItem("check",check);
+    localStorage.removeItem("ime");
+    localStorage.removeItem("prezime");
+    localStorage.removeItem("email");
+    location.reload();
+    }

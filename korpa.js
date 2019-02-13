@@ -28,3 +28,11 @@ function finish(){
     var ime = localStorage.getItem("ime");
     alert("Hvala " +ime+ " što ste kupovali kod nas, posetite nas opet !!!");
 }
+function logout(){     // logout funkcija
+    check = false;
+    sessionStorage.setItem("check",check);
+    localStorage.removeItem("ime");
+    localStorage.removeItem("prezime");
+    localStorage.removeItem("email");
+    location.reload();
+    }
