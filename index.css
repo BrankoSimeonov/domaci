@@ -1099,7 +1099,7 @@ input[type="number"]::placeholder {
   margin: auto;
   margin-top: 0px;
   width: 70%;
-  height: 70%;
+  height: auto;
   z-index: 3;
   visibility: hidden;
 } 
@@ -1113,7 +1113,7 @@ input[type="number"]::placeholder {
   margin: 70px 140px 175px 140px;
   padding : 30px;
   width: 70%;
-  height: 70%;
+  height: auto;
   background-color: orange;
   visibility: hidden;
   border: 1px solid black;
