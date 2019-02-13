@@ -917,6 +917,7 @@ path.two {
 
   /* css za rotiranje slika u galeriji */
   .flip-card {
+      margin: auto;
     background-color: transparent;
     width: 350px;
     height: 350px;
@@ -956,6 +957,7 @@ path.two {
 }
 /* UNUTRASNJA KOLONA GALERIJE */
 .flip-card-x {
+    margin: auto;
     background-color: transparent;
     width: 350px;
     height: 350px;
@@ -996,6 +998,7 @@ path.two {
 /* DESNA KOLONA GELERIJE*/
 
 .flip-card-d {
+    margin: auto;
     background-color: transparent;
     width: 350px;
     height: 350px;
