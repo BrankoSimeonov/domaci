@@ -34,5 +34,6 @@ function logout(){     // logout funkcija
     localStorage.removeItem("ime");
     localStorage.removeItem("prezime");
     localStorage.removeItem("email");
+    localStorage.removeItem("red");
     location.reload();
     }
