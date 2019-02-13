@@ -176,6 +176,7 @@
         }
 
     function korpa(){
+        document.getElementById("kolica").disabled = true;
         var r = 0;                                                  //  pomocna promenljiva sluzi da razdvoji redove, deklarisana i definisana na 0 
         var y = 0;
         var total = 0;
@@ -223,6 +224,8 @@
 
 
         function prikaziKorpu() {
+            document.getElementById('bg_mask').style='height:auto';
+            document.getElementById('frontlayer').style='height:auto';
             document.getElementById('bg_mask').style.visibility='visible';
             document.getElementById('frontlayer').style.visibility='visible';
           }
@@ -240,6 +243,7 @@
                 novacelija.appendChild(tekst);           
             }
             document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total;
+            document.getElementById("kolica").disabled = false;
         }
 
 

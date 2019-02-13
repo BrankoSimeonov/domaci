@@ -1072,7 +1072,7 @@ input[type="number"]::placeholder {
   position: relative;
   }
 
-#cart img  {
+#cart {
   float: right;
 } 
 
@@ -1100,12 +1100,14 @@ input[type="number"]::placeholder {
   margin-top: 0px;
   width: 70%;
   height: auto;
+  max-height: 7000px;
   z-index: 3;
   visibility: hidden;
 } 
 
 #frontlayer {
   position: absolute;
+  overflow: auto;
   top: 0;
   right: 0;
   bottom: 0;
@@ -1114,6 +1116,7 @@ input[type="number"]::placeholder {
   padding : 30px;
   width: 70%;
   height: auto;
+  max-height: 7000px;
   background-color: orange;
   visibility: hidden;
   border: 1px solid black;
