@@ -201,10 +201,10 @@ function korpa(){                                                               
                     if(i==0)tekst=document.createTextNode(1+y);                     //  da bi redni brojevi bili redni, tj. ako npr. od 4 stavke u korpi obrisemo trecu, da redni brojevi ne bi isli 1,2,4
                     novacelija.appendChild(tekst);}                                 //  ovaj append dodaje od drugog do setog elementa tabele ( prvi je redni broj , a sedmi slikica)
             }
-            r = r + 6;                                                              // povecavam promenljivu za 6, da bi citao podatke iz "zamisljenog "sledeceg reda tabele  
-            y++;}}                                                                  // podaci se u stvarnosti nalaze u nizu RED
-    document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total.toFixed(2);// ovde ispisujem ukupno zaduzenje u donjem desnom uglu 
-    prikaziKorpu();                                                                 // sada je tabela spreman za prikaz i TEK sada pozivam funkciju za prikaz kolica 
+            r = r + 6;                                                                      // povecavam promenljivu za 6, da bi citao podatke iz "zamisljenog "sledeceg reda tabele  
+            y++;}}                                                                          // podaci se u stvarnosti nalaze u nizu RED
+    document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total.toFixed(2)+" RSD"; // ovde ispisujem ukupno zaduzenje u donjem desnom uglu 
+    prikaziKorpu();                                                                         // sada je tabela spreman za prikaz i TEK sada pozivam funkciju za prikaz kolica 
 }
 
 function prikaziKorpu() {                                                           // funkcija za prikaz kolica (od samog starta je sve tu, samo je invisible ;)  )
@@ -224,9 +224,9 @@ function sakrijKorpu() {                                                        
         var novacelija  = novired.insertCell(i);
         var tekst  = document.createTextNode(naslov[i]);
         novacelija.appendChild(tekst);}
-    document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total;           // ispis ukupnog zbira u donjem desnom uglu ( bice 0 posto smo obrisali sve podatke)
-    document.getElementById("kolica").disabled = false;                             // na posletku ponovo omogucavam da se moze kliknuti na kolica
-}
+    document.getElementById("ispisUkupno").innerHTML = " UKUPNO: "+total.toFixed(2)+" RSD";     // ispis ukupnog zbira u donjem desnom uglu ( bice 0 posto smo obrisali sve podatke)
+    document.getElementById("kolica").disabled = false;                                         // na posletku ponovo omogucavam da se moze kliknuti na kolica
+}                                                                   
 
 
 function brisiRed(brisi){                                                           //  funkcija koja brise red u kolicima
