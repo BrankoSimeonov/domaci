@@ -1136,8 +1136,13 @@ input[type="number"]::placeholder {
 }
 
 
+/* slike u opisu kataloga */
 
-
+#opis1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.3)), url(images/resistor-png-2.png);
+}
 
 /*   dodatak za katalog  v2.0  */ 
 
