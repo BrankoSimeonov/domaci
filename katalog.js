@@ -3,6 +3,9 @@
     var total = 0;   
     
     function run(){              // funkcija koja se automatski ucitava prilikom otvaranja stranice katalog
+       
+       //    dovde - + ide
+       
         var ime = localStorage.getItem("ime");
         var prezime = localStorage.getItem("prezime");
         document.getElementById("kupac").innerHTML = ' ' +ime+ ' ' +prezime;        // citam ime i prezime iz localstoradge i ispisujem na strani
@@ -23,6 +26,11 @@
         document.getElementById("forma").reset();                                   //  resetujem formu, da bi mogao novi unos
         document.getElementById("korpa1").disabled = true;                          //  ponovo disejblujem dugme dodaj u korpu (dok se ne izbira tip i kolicina)
         document.getElementById("itemCount").innerHTML = b;                         //  span na kolicima (mali crveni krug) i u njemu broj artikala u korpi
+        document.getElementById("ispis").innerHTML = 0;
+        document.getElementById("ukupno").innerHTML = 0;
+        document.getElementById("cena").innerHTML = 0;
+        document.getElementById("cena").value = 0;
+
     }
  
     function locstormake2(){                                                        // isto kao locstormake  (ovaj iznad) samo za sledeci element kataloga (ima ih 4 ista - kao sto rekoh )
@@ -41,6 +49,11 @@
         document.getElementById("forma2").reset();
         document.getElementById("korpa2").disabled = true;
         document.getElementById("itemCount").innerHTML = b;
+        document.getElementById("ispis2").innerHTML = 0;
+        document.getElementById("ukupno2").innerHTML = 0;
+        document.getElementById("cena2").innerHTML = 0;
+        document.getElementById("cena2").value = 0;
+
     }
 
     function locstormake3(){                                                        // isto kao locstormake  (ovaj iznad) samo za sledeci element kataloga (ima ih 4 ista - kao sto rekoh )
@@ -59,6 +72,10 @@
         document.getElementById("forma3").reset();
         document.getElementById("korpa3").disabled = true;
         document.getElementById("itemCount").innerHTML = b;
+        document.getElementById("ispis3").innerHTML = 0;
+        document.getElementById("ukupno3").innerHTML = 0;
+        document.getElementById("cena3").innerHTML = 0;
+        document.getElementById("cena3").value = 0;
     }
 
     function locstormake4(){                                                         // isto kao locstormake  (ovaj iznad) samo za sledeci element kataloga (ima ih 4 ista - kao sto rekoh )
@@ -77,85 +94,110 @@
         document.getElementById("forma4").reset();
         document.getElementById("korpa4").disabled = true;
         document.getElementById("itemCount").innerHTML = b;
+        document.getElementById("ispis4").innerHTML = 0;
+        document.getElementById("ukupno4").innerHTML = 0;
+        document.getElementById("cena4").innerHTML = 0;
+        document.getElementById("cena4").value = 0;
     }
 
     function funkcija(){                                                        // funkcija koja se pokrece klikom na kolicinu ili tip -takodje nasledjeno od Branka pa sve ima 4 puta :)
         var vrstar = document.getElementById("tip").value;                      // uzimam vrednosti kolicine i tipa
         var kom = document.getElementById("komada").value;
-        document.getElementById("ukupno").value = (document.getElementById("cena").value * kom).toFixed(2); // ispisujem na formi ukupnu vrednost (kolicina*cena)
+        document.getElementById("ukupno").innerHTML = (document.getElementById("cena").value * kom).toFixed(2); // ispisujem na formi ukupnu vrednost (kolicina*cena)
         if (vrstar!="0" && kom>0) document.getElementById("korpa1").disabled = false; else document.getElementById("korpa1").disabled = true;   // ako su uneseni i kolicina i tip omogucujem dugme dodaj u korpu
         if(vrstar=="100r"){                                                     // u redovima ispod se dodeljuje jedinicna cena za svaki tip 
-            document.getElementById("cena").value ="1.2";                       // i tako 4 puta :)
+            document.getElementById("cena").value ="1.20";                       // i tako 4 puta :)
+            document.getElementById("cena").innerHTML ="1.20";
         }else if (vrstar=="120r"){
-            document.getElementById("cena").value ="1.3";
+            document.getElementById("cena").value ="1.30";
+            document.getElementById("cena").innerHTML ="1.30";
         }else if (vrstar=="1k"){
-            document.getElementById("cena").value ="1.4";
+            document.getElementById("cena").value ="1.40";
+            document.getElementById("cena").innerHTML ="1.40";
         }else if (vrstar=="10k"){
-            document.getElementById("cena").value ="1.5";
+            document.getElementById("cena").value ="1.50";
+            document.getElementById("cena").innerHTML ="1.50";
         }else if (vrstar=="100k"){
-            document.getElementById("cena").value ="1.6";
+            document.getElementById("cena").value ="1.60";
+            document.getElementById("cena").innerHTML ="1.60";
         }else{
             document.getElementById("cena").value ="";
+            document.getElementById("cena").innerHTML ="0.00";
         }  
     }
         
     function funkcija2(){                                                       // isto kao iznad, samo za sledeci element
         var vrstar = document.getElementById("tip2").value;
         var kom = document.getElementById("komada2").value;
-        document.getElementById("ukupno2").value = (document.getElementById("cena2").value * kom).toFixed(2);
+        document.getElementById("ukupno2").innerHTML = (document.getElementById("cena2").value * kom).toFixed(2);
         if (vrstar!="0" && kom>0) document.getElementById("korpa2").disabled = false; else document.getElementById("korpa2").disabled = true;
         if(vrstar=="100uF"){
             document.getElementById("cena2").value ="50";
+            document.getElementById("cena2").innerHTML ="50.00";
         }else if (vrstar=="220uF"){
             document.getElementById("cena2").value ="80";
+            document.getElementById("cena2").innerHTML ="80.00";
         }else if (vrstar=="470uF"){
             document.getElementById("cena2").value ="100";
+            document.getElementById("cena2").innerHTML ="100.00";
         }else if (vrstar=="1000uF"){
             document.getElementById("cena2").value ="120";
+            document.getElementById("cena2").innerHTML ="120.00";
         }else if (vrstar=="2200uF"){
             document.getElementById("cena2").value ="160";
+            document.getElementById("cena2").innerHTML ="160.00";
         }else{
-            document.getElementById("cena2").value ="";
+            document.getElementById("cena2").value ="0.00";
         }
     }
     
     function funkcija3(){                                                       // isto kao iznad, samo za sledeci element
         var vrstar = document.getElementById("tip3").value;
         var kom = document.getElementById("komada3").value;
-        document.getElementById("ukupno3").value = (document.getElementById("cena3").value * kom).toFixed(2);
+        document.getElementById("ukupno3").innerHTML = (document.getElementById("cena3").value * kom).toFixed(2);
         if (vrstar!="0" && kom>0) document.getElementById("korpa3").disabled = false; else document.getElementById("korpa3").disabled = true;
         if(vrstar=="1N4007"){
             document.getElementById("cena3").value ="5";
+            document.getElementById("cena3").innerHTML ="5.00";
         }else if (vrstar=="1N5404"){
             document.getElementById("cena3").value ="10";
+            document.getElementById("cena3").innerHTML ="10.00";
         }else if (vrstar=="1N5408"){
             document.getElementById("cena3").value ="12";
+            document.getElementById("cena3").innerHTML ="12.00";
         }else if (vrstar=="25F120M"){
             document.getElementById("cena3").value ="240";
+            document.getElementById("cena3").innerHTML ="240.00";
         }else if (vrstar=="40HFR100M"){
             document.getElementById("cena3").value ="450";
+            document.getElementById("cena3").innerHTML ="450.00";
         }else{
-            document.getElementById("cena3").value ="";
+            document.getElementById("cena3").value ="0.00";
         }
     }
                     
     function funkcija4(){                                                       // isto kao iznad, samo za sledeci element
         var vrstar = document.getElementById("tip4").value;
         var kom = document.getElementById("komada4").value;
-        document.getElementById("ukupno4").value = (document.getElementById("cena4").value * kom).toFixed(2);
+        document.getElementById("ukupno4").innerHTML = (document.getElementById("cena4").value * kom).toFixed(2);
         if (vrstar!="0" && kom>0) document.getElementById("korpa4").disabled = false; else document.getElementById("korpa4").disabled = true;
         if(vrstar=="2N2222A"){
             document.getElementById("cena4").value ="3";
+            document.getElementById("cena4").innerHTML ="3.00";
         }else if (vrstar=="2N3439"){
             document.getElementById("cena4").value ="55";
+            document.getElementById("cena4").innerHTML ="55.00";
         }else if (vrstar=="BC547"){
             document.getElementById("cena4").value ="195";
+            document.getElementById("cena4").innerHTML ="195.00";
         }else if (vrstar=="2SA1943"){
             document.getElementById("cena4").value ="220";
+            document.getElementById("cena4").innerHTML ="220.00";
         }else if (vrstar=="2SC5200"){
             document.getElementById("cena4").value ="416";
+            document.getElementById("cena4").innerHTML ="416.00";
         }else{
-            document.getElementById("cena4").value ="";
+            document.getElementById("cena4").value ="0.00";
         }
     }
                     
@@ -262,7 +304,62 @@ function vrednostiTabele() {                                                    
                                                                                     // jednostavno, zar ne ?
                                                                                     // +++++++++++++++++++++
 
+// dodatak
+function plus(){
+    var stanje = document.getElementById("komada").value;                           //  Ovaj deo je za plus i minus ispred i iza kolicine
+    novostanje = Number(stanje)+1;
+    document.getElementById("komada").value = novostanje;
+    document.getElementById("ispis").innerHTML = novostanje;
+    funkcija();
+}
+function plus2(){
+    var stanje2 = document.getElementById("komada2").value;
+    novostanje2 = Number(stanje2)+1;
+    document.getElementById("komada2").value = novostanje2;
+    document.getElementById("ispis2").innerHTML = novostanje2;
+    funkcija2();
+}
+function plus3(){
+    var stanje3 = document.getElementById("komada3").value;
+    novostanje3 = Number(stanje3)+1;
+    document.getElementById("komada3").value = novostanje3;
+    document.getElementById("ispis3").innerHTML = novostanje3;
+    funkcija3();
+}
+function plus4(){
+    var stanje4 = document.getElementById("komada4").value;
+    novostanje4 = Number(stanje4)+1;
+    document.getElementById("komada4").value = novostanje4;
+    document.getElementById("ispis4").innerHTML = novostanje4;
+    funkcija4();
+}
 
 
-
-
+function minus(){
+    var stanje = document.getElementById("komada").value;
+    novostanje = Number(stanje)-1;
+    document.getElementById("komada").value = novostanje;
+    document.getElementById("ispis").innerHTML = novostanje;
+    funkcija();
+}
+function minus2(){
+    var stanje2 = document.getElementById("komada2").value;
+    novostanje2 = Number(stanje2)-1;
+    document.getElementById("komada2").value = novostanje2;
+    document.getElementById("ispis2").innerHTML = novostanje2;
+    funkcija2();
+}
+function minus3(){
+    var stanje3 = document.getElementById("komada3").value;
+    novostanje3 = Number(stanje3)-1;
+    document.getElementById("komada3").value = novostanje3;
+    document.getElementById("ispis3").innerHTML = novostanje3;
+    funkcija3();
+}
+function minus4(){
+    var stanje4 = document.getElementById("komada4").value;
+    novostanje4 = Number(stanje4)-1;
+    document.getElementById("komada4").value = novostanje4;
+    document.getElementById("ispis4").innerHTML = novostanje4;
+    funkcija4();
+}
