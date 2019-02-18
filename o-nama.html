@@ -1,0 +1,558 @@
+<!doctype html>
+
+<html lang="sr">
+
+<head>
+
+    <title>Mala prodavnica elektornike - O nama</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Distribucija i prodaja na veliko i malo elektronskih komponenti">
+    <meta name="author" content="FrontEnd Zrenjanin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <!--ScrollReveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+<style>
+    @media (min-width: 576px ){
+       h3{
+           font-size: 150%;
+       } 
+    }
+    @media (min-width: 768px ){
+       h3{
+           font-size: 150%;
+       } 
+    }
+    @media (min-width: 992px ){
+       h3{
+           font-size: 150%;
+       } 
+    }
+    
+
+</style>
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript -->
+    <!-- jQuery deo i Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <div class="container">
+        <header>
+            <!-- Header podeljen u tri dela -->
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 prvi">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.png" width="150" alt="prodavnica logo">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center">
+                    <h1 class="display-5">Internet prodavnica</h1>
+                    <div class="display-6 podnaslov">Elektronskih komponenti</div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center treci">
+                    <img src="images/norton.png" width="200" alt="prodavnica logo">
+                </div>
+            </div>
+            <!-- Navigacija u bootstrapu-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#prodavnica1"
+                        aria-controls="prodavnica1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="prodavnica1">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Početna</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="katalog.html">Katalog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="korpa.html">Korpa</a>
+                            </li>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="o-nama.html">O nama<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pomoc.html">Pomoć</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="search-box">
+                            <input  type="text"  placeholder="&#x1F440">
+                            <span></span>
+                        </div>
+                        <div id="logout">
+                            <a class="nav-link" href="index.html" onclick="logout()">Logout</a>
+                        </div>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <!-- Ovde upisati vas deo -->
+
+            
+            <div class="row justify-content-center">
+                <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1 class="gallery-title text-center mt-3 tim">Naš tim</h1>
+                </div>
+                <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-3 text-center border-top border-info">
+                    <h3 class="text-center mt-5">Aleksandar Đorđević</h3>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                            </div>
+                        <div class="flip-card-back">
+                            <h1>Predavač</h1> 
+                            <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                            <p class="mb-5">Detalji o radu</p>
+                            <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Aleksandra</button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-3 text-center border-top border-info">
+                    <h3 class="text-center mt-5">Olivera Zečević</h3>
+                    <div class="flip-card-x">
+                        <div class="flip-card-inner-x">
+                            <div class="flip-card-front-x">
+                                <img src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993__340.png" class="img-thumbnail">
+                            </div>
+                            <div class="flip-card-back-x">
+                                <h1>Supervizor</h1> 
+                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                <p class="mb-5">Detalji o radu</p>
+                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Asistenkinju</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                <div class="gallery_product col-xl-4 col-lg-6 col-md-12 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                    <h3 class="text-center mt-5">Branko Simeonov</h3>
+                    <div class="flip-card-d">
+                        <div class="flip-card-inner-d">
+                            <div class="flip-card-front-d">
+                                <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                            </div>
+                            <div class="flip-card-back-d">
+                                <h1>Organizator</h1> 
+                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                <p class="mb-5">Detalji o radu</p>
+                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Branka</button>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation mt-3 mb-5 text-center border-top border-info">
+                        <h3 class="text-center mt-5">Petar Milićević</h3>
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-front">
+                                    <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                </div>
+                                <div class="flip-card-back">
+                                    <h1>HTML</h1> 
+                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                    <p class="mb-5">Detalji o radu</p>
+                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Petra</button>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                        <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                            <h3 class="text-center mt-5">Nikola Lukić</h3>
+                            <div class="flip-card-x">
+                                <div class="flip-card-inner-x">
+                                    <div class="flip-card-front-x">
+                                        <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                    </div>
+                                    <div class="flip-card-back-x">
+                                        <h1>CSS</h1> 
+                                        <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                        <p class="mb-5">Detalji o radu</p>
+                                        <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Nikolu</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+
+                            <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                <h3 class="text-center mt-5">Goran Malenić</h3>
+                                <div class="flip-card-d">
+                                    <div class="flip-card-inner-d">
+                                        <div class="flip-card-front-d">
+                                            <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                        </div>
+                                        <div class="flip-card-back-d senka">
+                                            <h1>JavaScript</h1> 
+                                            <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                            <p class="mb-5">Detalji o radu</p>
+                                            <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Gorana</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+
+                                <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation mt-3 mb-5 text-center border-top border-info">
+                                    <h3 class="text-center mt-5">Zorana Jovanović</h3>
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                            <div class="flip-card-front">
+                                                <img src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993__340.png" class="img-thumbnail">
+                                            </div>
+                                            <div class="flip-card-back">
+                                                <h1>Front-End</h1> 
+                                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                <p class="mb-5">Detalji o radu</p>
+                                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Zoranu</button>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
+
+                                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                        <h3 class="text-center mt-5">Saša Bocin</h3>
+                                        <div class="flip-card-x">
+                                            <div class="flip-card-inner-x">
+                                                <div class="flip-card-front-x">
+                                                    <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                </div>
+                                                <div class="flip-card-back-x">
+                                                    <h1>Front-End</h1> 
+                                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                    <p class="mb-5">Detalji o radu</p>
+                                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Sasu</button>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+
+                                        <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                            <h3 class="text-center mt-5">Dušan Marinković</h3>
+                                            <div class="flip-card-d">
+                                                <div class="flip-card-inner-d">
+                                                    <div class="flip-card-front-d">
+                                                        <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                    </div>
+                                                    <div class="flip-card-back-d senka">
+                                                        <h1>Front-End</h1> 
+                                                        <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                        <p class="mb-5">Detalji o radu</p>
+                                                        <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Dusana</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                            </div>
+
+                                            <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation mt-3 mb-5 text-center border-top border-info">
+                                                <h3 class="text-center mt-5">Saša Stojšin</h3>
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                        <div class="flip-card-front">
+                                                            <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                        </div>
+                                                        <div class="flip-card-back">
+                                                            <h1>Front-End</h1> 
+                                                            <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                            <p class="mb-5">Detalji o radu</p>
+                                                            <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Sasu</button>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                </div>
+
+                                                <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                    <h3 class="text-center mt-5">Neli Buntić Korovljev</h3>
+                                                    <div class="flip-card-x">
+                                                        <div class="flip-card-inner-x">
+                                                            <div class="flip-card-front-x">
+                                                                <img src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993__340.png" class="img-thumbnail">
+                                                            </div>
+                                                            <div class="flip-card-back-x">
+                                                                <h1>Front-End</h1> 
+                                                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                <p class="mb-5">Detalji o radu</p>
+                                                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Neli</button>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+
+                                                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                                        <h3 class="text-center mt-5">Velemir Graor</h3>
+                                                        <div class="flip-card-d">
+                                                            <div class="flip-card-inner-d">
+                                                                <div class="flip-card-front-d">
+                                                                    <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                </div>
+                                                                <div class="flip-card-back-d senka">
+                                                                    <h1>Front-End</h1> 
+                                                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                    <p class="mb-5">Detalji o radu</p>
+                                                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Velemira</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                        </div>
+                                                        <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation mt-3 mb-5 text-center border-top border-info">
+                                                            <h3 class="text-center mt-5">Dragan Gračik</h3>
+                                                            <div class="flip-card">
+                                                                <div class="flip-card-inner">
+                                                                    <div class="flip-card-front">
+                                                                        <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                    </div>
+                                                                    <div class="flip-card-back">
+                                                                        <h1>Front-End</h1> 
+                                                                        <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                        <p class="mb-5">Detalji o radu</p>
+                                                                        <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Dragana</button>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                            </div>
+                                                            <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                                <h3 class="text-center mt-5">Miroslav Ćirić</h3>
+                                                                <div class="flip-card-x">
+                                                                    <div class="flip-card-inner-x">
+                                                                        <div class="flip-card-front-x">
+                                                                            <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                        </div>
+                                                                        <div class="flip-card-back-x">
+                                                                            <h1>Front-End</h1> 
+                                                                            <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                            <p class="mb-5">Detalji o radu</p>
+                                                                            <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Miroslava</button>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                </div>
+                                                                <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                                                    <h3 class="text-center mt-5">Milica Radovanović</h3>
+                                                                    <div class="flip-card-d">
+                                                                        <div class="flip-card-inner-d">
+                                                                            <div class="flip-card-front-d">
+                                                                                <img src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993__340.png" class="img-thumbnail">
+                                                                            </div>
+                                                                            <div class="flip-card-back-d senka">
+                                                                                <h1>Front-End</h1> 
+                                                                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                <p class="mb-5">Detalji o radu</p>
+                                                                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Milicu</button>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                    </div>
+                                                                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation mt-3 mb-5 text-center border-top border-info">
+                                                                        <h3 class="text-center mt-5">Monika Čeke</h3>
+                                                                        <div class="flip-card">
+                                                                            <div class="flip-card-inner">
+                                                                                <div class="flip-card-front">
+                                                                                    <img src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993__340.png" class="img-thumbnail">
+                                                                                </div>
+                                                                                <div class="flip-card-back">
+                                                                                    <h1>Front-End</h1> 
+                                                                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                    <p class="mb-5">Detalji o radu</p>
+                                                                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Moniku</button>
+                                                                                  </div>
+                                                                                </div>
+                                                                              </div>
+                                                                        </div>
+                                                                        <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                                            <h3 class="text-center mt-5">Ognjen Čikić</h3>
+                                                                            <div class="flip-card-x">
+                                                                                <div class="flip-card-inner-x">
+                                                                                    <div class="flip-card-front-x">
+                                                                                        <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                    </div>
+                                                                                    <div class="flip-card-back-x">
+                                                                                        <h1>Front-End</h1> 
+                                                                                        <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                        <p class="mb-5">Detalji o radu</p>
+                                                                                        <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Ognjena</button>
+                                                                                      </div>
+                                                                                    </div>
+                                                                                  </div>
+                                                                            </div>
+                                                                            <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                                                                <h3 class="text-center mt-5">Marko Arsić</h3>
+                                                                                <div class="flip-card-d">
+                                                                                    <div class="flip-card-inner-d">
+                                                                                        <div class="flip-card-front-d">
+                                                                                            <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                        </div>
+                                                                                        <div class="flip-card-back-d senka">
+                                                                                            <h1>Front-End</h1> 
+                                                                                            <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                            <p class="mb-5">Detalji o radu</p>
+                                                                                            <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Marka</button>
+                                                                                          </div>
+                                                                                        </div>
+                                                                                      </div>
+                                                                                </div>
+                                                                                <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter irrigation mt-3 mb-5 text-center border-top border-info">
+                                                                                    <h3 class="text-center mt-5">Filip Jungić</h3>
+                                                                                    <div class="flip-card">
+                                                                                        <div class="flip-card-inner">
+                                                                                            <div class="flip-card-front">
+                                                                                                <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                            </div>
+                                                                                            <div class="flip-card-back">
+                                                                                                <h1>Front-End</h1> 
+                                                                                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                <p class="mb-5">Detalji o radu</p>
+                                                                                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Filipa</button>
+                                                                                              </div>
+                                                                                            </div>
+                                                                                          </div>
+                                                                                    </div>
+                                                                                    <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                                                        <h3 class="text-center mt-5">Verica Milatović</h3>
+                                                                                        <div class="flip-card-x">
+                                                                                            <div class="flip-card-inner-x">
+                                                                                                <div class="flip-card-front-x">
+                                                                                                    <img src="https://cdn.pixabay.com/photo/2014/04/02/17/07/user-307993__340.png" class="img-thumbnail">
+                                                                                                </div>
+                                                                                                <div class="flip-card-back-x">
+                                                                                                    <h1>Front-End</h1> 
+                                                                                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                    <p class="mb-5">Detalji o radu</p>
+                                                                                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Vericu</button>
+                                                                                                  </div>
+                                                                                                </div>
+                                                                                              </div>
+                                                                                        </div>
+                                                                                        <div class="gallery_product col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                                                                            <h3 class="text-center mt-5">Bojan Ramić</h3>
+                                                                                            <div class="flip-card-d">
+                                                                                                <div class="flip-card-inner-d">
+                                                                                                    <div class="flip-card-front-d">
+                                                                                                        <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                                    </div>
+                                                                                                    <div class="flip-card-back-d senka">
+                                                                                                        <h1>Front-End</h1> 
+                                                                                                        <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                        <p class="mb-5">Detalji o radu</p>
+                                                                                                        <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Bojana</button>
+                                                                                                      </div>
+                                                                                                    </div>
+                                                                                                  </div>
+                                                                                            </div>
+
+
+                                                                                            <div class="row">
+                                                                                            <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                                                                <h3 class="text-center mt-5">Goran Ćurčić</h3>
+                                                                                                <div class="flip-card" style="width:250px;height:250px">
+                                                                                                    <div class="flip-card-inner">
+                                                                                                        <div class="flip-card-front">
+                                                                                                            <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                                        </div>
+                                                                                                        <div class="flip-card-back">
+                                                                                                            <h1>Front-End</h1> 
+                                                                                                            <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                            <p class="mb-5">Detalji o radu</p>
+                                                                                                            <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Gorana</button>
+                                                                                                          </div>
+                                                                                                        </div>
+                                                                                                      </div>
+                                                                                                </div>
+                                                                                                <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                                                                    <h3 class="text-center mt-5">Vuk Vukotić</h3>
+                                                                                                    <div class="flip-card-x" style="width:250px;height:250px">
+                                                                                                        <div class="flip-card-inner-x">
+                                                                                                            <div class="flip-card-front-x">
+                                                                                                                <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                                            </div>
+                                                                                                            <div class="flip-card-back-x">
+                                                                                                                <h1>Front-End</h1> 
+                                                                                                                <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                                <p class="mb-5">Detalji o radu</p>
+                                                                                                                <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Vuka</button>
+                                                                                                              </div>
+                                                                                                            </div>
+                                                                                                          </div>
+                                                                                                    </div>
+                                                                                                    <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12 filter sprinkle mt-3 mb-5 text-center border-top border-info">
+                                                                                                        <h3 class="text-center mt-5">Aleksandar Stefanov</h3>
+                                                                                                        <div class="flip-card-x" style="width:250px;height:250px">
+                                                                                                            <div class="flip-card-inner-x">
+                                                                                                                <div class="flip-card-front-x">
+                                                                                                                    <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                                                </div>
+                                                                                                                <div class="flip-card-back-x">
+                                                                                                                    <h1>Front-End</h1> 
+                                                                                                                    <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                                    <p class="mb-5">Detalji o radu</p>
+                                                                                                                    <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Aleksandra</button>
+                                                                                                                  </div>
+                                                                                                                </div>
+                                                                                                              </div>
+                                                                                                        </div>
+                                                                                                        <div class="gallery_product col-xl-3 col-lg-6 col-md-6 col-sm-12 col-xs-12  filter hdpe mt-3 mb-5 text-center border-top border-info">
+                                                                                                            <h3 class="text-center mt-5">Milan Ćuk</h3>
+                                                                                                            <div class="flip-card-d" style="width:250px;height:250px">
+                                                                                                                <div class="flip-card-inner-d">
+                                                                                                                    <div class="flip-card-front-d">
+                                                                                                                        <img src="https://png.pngtree.com/element_our/png/20181206/users-vector-icon-png_260862.jpg" class="img-thumbnail">
+                                                                                                                    </div>
+                                                                                                                    <div class="flip-card-back-d senka">
+                                                                                                                        <h1>Front-End</h1> 
+                                                                                                                        <h4 class="mt-3">Obrazovanje, Zvanje</h4> 
+                                                                                                                        <p class="mb-5">Detalji o radu</p>
+                                                                                                                        <button onclick=window.location.href="kontakt.html" class="btn btn-primary">Kontaktiraje Milana</button>
+                                                                                                                      </div>
+                                                                                                                    </div>
+                                                                                                                  </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                </div>
+            
+                <h3 class="text-center font-italic font-weight-light border-bottom border-info mb-5">Kreatori stranice o-nama</h3>
+                
+                <div class="embed-responsive embed-responsive-16by9 mt-5">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kVJFr5O8eX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" allowfullscreen></iframe>
+                </div>
+        </main>
+        <footer>
+          <p>Da li ste se upoznali i sa našim proizvodima?
+          <a href="katalog.html"> Pogledaj katalog.</a>
+          </p>
+          <p>Copyright &copy 2019</p>
+
+        </footer>
+    </div>
+
+    <script>
+        ScrollReveal().reveal('.gallery_product',{
+            delay:300,
+            distance: '15%',
+            origin: 'bottom',
+        });
+    </script>
+</body>
+
+</html>

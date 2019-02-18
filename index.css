@@ -1,0 +1,1324 @@
+/* Nikolin pocetni css */
+
+/* U sledecim komentarina su: */
+
+
+/* font Dosis postavljen u asterixu sto znaci da ce svugde primeniti taj font */
+
+* {
+    font-family: "Dosis";
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    background: #f9f9f9;
+}
+
+/* naslovi su svi Roboto */
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Roboto";
+}
+
+/* HEADER SECTION */
+
+header {
+  background-image: url("images/clouds.jpg");
+  background-position: 0px 0px;
+  background-repeat: repeat-x;
+  animation: cloud 50s linear infinite reverse;
+}
+
+header img {
+    padding: 20px;
+}
+
+@keyframes cloud {
+  from {
+    background-position: 0 0; }
+  to {
+    background-position: -100% 0; } }
+
+header h1 {
+    font-weight: 400;
+    font-size: 3rem;
+    color:#007bff;
+    margin-bottom: -2px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+
+header .podnaslov {
+    color:#17a2b8;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 3px;
+    margin: 0 100px;
+    opacity: 0.7;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/* NAVIGATION SECTION */
+
+nav {
+  border-radius: 5px;
+  border-top: 4px solid #fff;
+}
+
+nav li {
+    font-size: 1.2rem;
+}
+
+/* MAIN */
+
+.dobrodosli {
+    font-style: italic;
+    border-bottom: 1px solid #17a2b8;
+    background: #17a2b8;
+    color:#fff;
+    font-size: 2rem;
+}
+
+/* FOOTER - Filip apdejtovao*/
+
+footer {
+    background: #007bff;
+    color:#fff;
+    padding: 10px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-top: 3px solid #292929;
+    text-align: center;
+    font-size: 2.4vh;
+    margin-top: 2vh;
+}
+footer a{
+  color: #292929;
+  font-weight: bold;
+}
+footer a:hover{
+  color: white;
+  text-decoration: none;
+}
+#korpaFooter {
+  margin-top: 20vh;
+}
+
+
+/* OVDE JE KRAJ NIKOLINOG POCETNOG CSS-a, ISPOD SE PISE DETALJNIJE! */
+
+
+/* Goran, font za ime i prezime */
+#klijent{
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: "Dosis";
+}
+
+
+/*dusan*/
+a {
+    color: #92badd;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+
+/*naslov*/
+
+h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 10px 8px 10px 8px;
+    color: #615e5e;
+}
+
+
+/*forma*/
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+#formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* input polja*/
+
+input[type=submit] {
+    background-color: #56baed;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type=submit]:hover {
+    background-color: #0b83be;
+    color: #dce8f1;
+    font-weight: bolder;
+}
+
+input[type=submit]:active {
+    -moz-transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -o-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+}
+
+input[type=text] {
+    background-color: #f6f6f6;
+    border: none;
+    color: #0d0d0d;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    width: 80%;
+    border: 2px solid #f6f6f6;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+input[type=text]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+}
+
+input[type=text]:placeholder {
+    color: #cccccc;
+}
+
+
+/* animacija - ako ne treba animacija samo treba da se zakomentarise ovaj deo */
+/* --------------------------------------------- */
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+}
+
+.fadeIn.first {
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2;
+    animation-delay: 0.2;
+}
+
+.fadeIn.second {
+    -webkit-animation-delay: 0.4;
+    -moz-animation-delay: 0.4;
+    animation-delay: 0.4;
+}
+
+.fadeIn.third {
+    -webkit-animation-delay: 0.6;
+    -moz-animation-delay: 0.6;
+    animation-delay: 0.6;
+}
+
+.fadeIn.fourth {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.fadeIn.fifth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.fadeIn.sixth {
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+/* --------------------------------------------- */
+
+/* kraj animacije */
+
+
+/*za forgot password*/
+
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+    width: 100%;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+/*ikonica ako je ukljucena*/
+
+#icon {
+    width: 30%;
+}
+/*dusan*/
+
+/* stranica Pomoc */
+.pomoc{
+    text-align: center;
+    background-color: transparent;
+    margin-top: 15px;
+}
+.pregled{
+    width: 120px;
+    padding-left: 15px;
+    text-align: center;
+}
+#uplatnica{
+    transition: transform .3s;
+    width: 300px;
+}
+
+#cards{
+    width: 50px;
+}
+#uplatnica {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #uplatnica:hover {
+      opacity: 0.7;
+
+    }
+  
+  /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+/* kraj stranice Pomoc */
+
+
+/* search u headeru */
+.search-box
+{
+  transform: translate(-5%);
+}
+
+.search-box input[type="text"] {
+  padding: 3px;
+  padding-left: 3px;
+  border: none;
+  margin: 10px;
+  background: none;
+  z-index: 1;
+  width: 45px;
+  height: 45px;
+  transition: all .25s ease-in .25s;
+  color: transparent;
+  font-size: 1.5rem;
+  line-height: 30px;
+  text-align: left;
+}
+
+.search-box ::placeholder
+{
+  position: relative;
+  top: 0;  
+  left:-2px;
+  color: white;
+}
+
+.search-box input[type="text"]:hover {
+  cursor: pointer;
+}
+.search-box input[type="text"]:hover:focus {
+  cursor: text;
+}
+.search-box input[type="text"]:hover + span {
+  background: rgba(255, 255, 255, 0.2);
+}
+.search-box input[type="text"]:focus {
+  width: 300px;
+  outline: none;
+  color: white;
+  background: none;
+  color: white;
+}
+.search-box input[type="text"]:focus + span {
+  width: 300px;
+}
+.search-box input[type="text"]:focus + span::before {
+  width: 5px;
+  opacity: 0;
+  transition: all .25s ease-in;
+}
+.search-box input[type="text"] + span {        /*   krug na lupi */
+  z-index: -1;
+  position: absolute;
+  border: 5px solid white;
+  top: 15%;
+  right: 1%;
+  width: 45px;
+  height: 45px;
+  transition: all .25s ease-in .25s;
+  border-radius: 35px;
+  left: 0;
+}
+.search-box input[type="text"] + span::before {       /*   crtica na lupi  */
+  transition: all .25s ease-in .5s;
+  transform-origin: left center;
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 5px;
+  border-radius: 5px;
+  background: white;
+  transform: rotate(45deg) translate(40px, 3px);
+}
+/* kraj searcha */
+
+/* ---------------------------- */
+/* Dragan */
+.btn{
+  white-space: nowrap;
+  background-color: #007bff !important;
+}
+/* .social{
+    display: inline;
+}
+
+.social a{
+    font-size: 2em;
+    padding: 1rem;
+  }
+  .fa-facebook{
+    color: #3b5998;
+  }
+  .fa-twitter{
+    color: #00aced;
+  }
+  .fa-google-plus-g{
+    color: #dd4b39;
+  }
+  .fa-instagram{
+    color: #517fa4;
+  }
+  .fa-youtube{
+    color: #bb0000;
+  }
+  .fa-facebook:hover, 
+  .fa-twitter:hover, 
+  .fa-google-plus-g:hover, 
+  .fa-instagram:hover,
+  .fa-youtube:hover{
+    color: #d5d5d5
+  } */
+  /* soc */
+.soc {
+    display:flex;
+    list-style: none;
+    text-align: center;
+  }
+  .soc li {
+    display: inline-block;
+  }
+  .soc a, .soc svg {
+    display: block;
+  }
+  .soc a {
+    position: relative;
+    height: 66px;
+    height: 4rem;
+    width: 66px;
+    width: 4rem;
+  }
+  .soc svg {
+    height: 100%;
+    width: 100%;
+  }
+  .face:hover, .inst:hover, .twit:hover, .you:hover, .linkd:hover {
+    border-radius: 100%;
+    color: #0e1a25;
+    fill: #0e1a25;
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    transition: background-color 0.5s, -webkit-transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out;
+    transition: background-color 0.5s, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  }
+.face {
+  color: #3b5998;
+  fill: #3b5998;
+}
+.face:hover {
+  background: #3b5998;
+}
+.inst {
+  color: #26d9d9;
+  fill: #26d9d9;
+}
+.inst:hover {
+  background: #26d9d9;
+}
+.twit {
+  color: #38A1F3;
+  fill: #38A1F3;
+}
+.twit:hover {
+  background: #38A1F3;
+}
+.you {
+  color: #ff0000;
+  fill: #ff0000;
+}
+.you:hover {
+  background: #ff0000;
+}
+.linkd {
+  color: #0077B5;
+  fill: #0077B5;
+}
+.linkd:hover {
+  background: #0077B5;
+}
+/* Animacija dugmeta Idi na korpu */
+.kasa {
+    display: flex;
+    justify-content: center;
+  }
+  
+.cta {
+    display: flex;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background: #007bff;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius:4px;
+}
+  
+.cta:focus {
+    outline: none; 
+}
+  
+.cta:hover {
+    transition: 0.5s;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+  
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+  
+.cta:hover  span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+  
+.cta span:nth-child(2) {
+    width: 20px;
+    margin-left: 30px;
+    position: relative;
+    top: 12%;
+}
+    
+/**************SVG****************/
+  
+path.one {
+    transition: 0.4s;
+    transform: translateX(-60%);
+}
+  
+path.two {
+    transition: 0.5s;
+    transform: translateX(-30%);
+}
+  
+.cta:hover path.three {
+    animation: color_anim 1s infinite 0.2s;
+}
+  
+.cta:hover path.one {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.6s;
+}
+  
+.cta:hover path.two {
+    transform: translateX(0%);
+    animation: color_anim 1s infinite 0.4s;
+}
+  
+/* SVG animations */
+  
+@keyframes color_anim {
+    0% {
+        fill: white;
+    }
+    50% {
+        fill: #FBC638;
+    }
+    100% {
+        fill: white;
+    }
+  }
+
+/* Button za kupovinu */
+.kupovina {
+  display: flex;
+  align-content: center;
+  min-width: 150px;
+  margin: 20px auto;
+  background: #007bff;
+  color: #fefefe;
+  font-size: 1.2em;
+  padding: 1em;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  transition: border-radius linear 0.05s, width linear 0.05s;
+}
+.kupovina:focus {
+  outline: 0;
+}
+.kupovina.animate {
+  width: 68.1818181818px;
+  height: 68.1818181818px;
+  min-width: 0;
+  border-radius: 50%;
+  color: transparent;
+
+}
+.kupovina.animate:after {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 25px;
+  border: 4px solid #fefefe;
+  border-radius: 50%;
+  border-left-color: transparent;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  animation: spin ease-in 2.5s forwards;
+  animation-name: spin;
+  -webkit-animation-name: spin;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  animation-duration: 2.5s;
+  -webkit-animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+.kupovina.animate.success:before {
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 12.5px;
+  border: 4px solid #fefefe;
+  border-right: 0;
+  border-top: 0;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(0);
+  transform: translate(-50%, -50%) rotate(0deg) scale(0);
+  -webkit-animation: success ease-in 0.15s forwards;
+  animation: success ease-in 0.15s forwards;
+  animation-delay: 2.5s;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  90% {
+    transform: translate(-50%, -50%) rotate(1080deg) scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+  98% {
+    -webkit-transform: translate(-50%, -50%) rotate(1080deg) scale(1);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(1080deg) scale(0);
+  }
+}
+@keyframes success {
+  from {
+    transform: translate(-50%, -50%) rotate(0) scale(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
+}
+@-webkit-keyframes success {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0) scale(0);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+  }
+}
+/* -----------------*/
+
+
+@media (min-width: 576px ){
+    h1{
+        font-size: 1.5rem;
+    } 
+    .podnaslov{
+        font-size: 1rem; 
+    }
+ }
+ @media (min-width: 768px ){
+    h1{
+        font-size: 2rem;
+    } 
+    .podnaslov{
+        font-size: 1.1rem; 
+    }
+ }
+ @media (min-width: 992px ){
+    h1{
+        font-size: 2.5rem;
+    } 
+    .podnaslov{
+        font-size: 1.2rem; 
+    }
+ }
+
+
+
+ /* STRANICA O NAMA */
+
+
+  /* css za rotiranje slika u galeriji */
+  .flip-card {
+      margin: auto;
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.8s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+/* Pozicija prednje i zadnje strane */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* Prednja strana */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    box-shadow: -8px 8px 8px rgb(0,0,0,0.2);
+}
+/* Zadnja strana */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    box-shadow: -8px 8px 8px rgb(0,0,0,0.2);
+}
+/* UNUTRASNJA KOLONA GALERIJE */
+.flip-card-x {
+    margin: auto;
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner-x {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.8s;
+    transform-style: preserve-3d;
+}
+.flip-card-x:hover .flip-card-inner-x {
+    transform: rotateX(180deg);
+}
+/* Pozicija prednje i zadnje strane */
+.flip-card-front-x, .flip-card-back-x {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* Prednja strana */
+.flip-card-front-x {
+    background-color: #bbb;
+    color: black;
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2),-8px 8px 8px rgb(0,0,0,0.2);
+}
+/* Zadnja strana */
+.flip-card-back-x {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateX(180deg);
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2),-8px 8px 8px rgb(0,0,0,0.2);
+}
+/* DESNA KOLONA GELERIJE*/
+
+.flip-card-d {
+    margin: auto;
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+.flip-card-inner-d {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.8s;
+    transform-style: preserve-3d;
+}
+.flip-card-d:hover .flip-card-inner-d {
+    transform: rotateY(-180deg);
+}
+
+.flip-card-front-d, .flip-card-back-d {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+/* Prednja strana */
+.flip-card-front-d {
+    background-color: #bbb;
+    color: black;
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2);
+}
+/* Zadnja strana */
+.flip-card-back-d {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(-180deg);
+    box-shadow: 8px 8px 8px rgb(0,0,0,0.2);
+}
+
+/* NIKOLA UBACIO NOVU KLASU U HTML-U ZA NASLOV "Nas Tim" */
+
+.tim {
+  font-family: "Dosis";
+  color:#17a2b8;
+  font-style: italic;
+  font-size: 3rem;
+}
+
+/* KRAJ STRANICE O NAMA */
+
+
+/* KATALOG INPUTI
+
+input[type="number"] {
+  padding: 0 0 0 5px;
+  height: 26px;
+  position: relative;
+  top: -1px;
+  left: 5px;
+}
+
+input[type="number"]::placeholder {
+  font-size: 1rem;
+} */
+
+
+/* KOLICA  */
+
+#cart-container {
+  float: right;
+  width: 20%;
+  position: relative;
+  }
+
+#cart {
+  float: right;
+} 
+
+#itemCount {
+  position: absolute;
+  display: none;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  text-align: center;
+  font-size: medium;
+}
+
+
+#bg_mask {
+  position: absolute;
+  border-radius: 25px;
+  top: 0;
+  right: 0;  bottom: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 0px;
+  width: 70%;
+  height: auto;
+  z-index: 3;
+  visibility: hidden;
+} 
+
+#frontlayer {
+  position: absolute;
+  border-radius: 25px;
+  overflow: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 70px 140px 175px 140px;
+  padding : 30px;
+  width: 70%;
+  height: auto;
+  background-color: orange;
+  visibility: hidden;
+  border: 1px solid black;
+  z-index: 4;
+} 
+
+#ispisUkupno{
+  float: right;
+  border: 1px solid dimgray;
+  border-radius: 5px;
+  margin-right: 10%;
+  margin-top: 1%;
+  padding: 5px;
+  background:whitesmoke;
+  color: red;
+  font-weight: bolder;
+}
+
+
+/* slike u opisu kataloga */
+
+#opis1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.3)), url(images/resistor-png-2.png);
+}
+
+/*   dodatak za katalog  v2.0  */ 
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #EDF1F6;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  text-rendering: optimizelegibility;
+}
+
+.ctrl {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #D5DCE6;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.ctrl__counter {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  color: #333C48;
+  text-align: center;
+  overflow: hidden;
+}
+
+.ctrl__counter.is-input .ctrl__counter-num {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter.is-input .ctrl__counter-input {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter-input {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  color: #333C48;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter-num {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 50px;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 100ms ease-in;
+  transition: opacity 100ms ease-in;
+}
+
+.ctrl__counter-num.is-increment-hide {
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+  transform: translateY(-50px);
+  -webkit-animation: increment-prev 100ms ease-in;
+  animation: increment-prev 100ms ease-in;
+}
+
+.ctrl__counter-num.is-increment-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-animation: increment-next 100ms ease-out;
+  animation: increment-next 100ms ease-out;
+}
+
+.ctrl__counter-num.is-decrement-hide {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-animation: decrement-prev 100ms ease-in;
+  animation: decrement-prev 100ms ease-in;
+}
+
+.ctrl__counter-num.is-decrement-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-animation: decrement-next 100ms ease-out;
+  animation: decrement-next 100ms ease-out;
+}
+
+.ctrl__button {
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background-color: #8498a7;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:hover {
+  background-color: #90a2b0;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+
+.ctrl__button:active {
+  background-color: #778996;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+}
+
+.ctrl__button--decrement { border-radius: 5px 0 0 5px; }
+
+.ctrl__button--increment { border-radius: 0 5px 5px 0; }
+ 
+/*   */   
+
+
+
+
+
+

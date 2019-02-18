@@ -1,0 +1,484 @@
+<!doctype html>
+
+<html lang="sr">
+
+<head>
+
+    <title>Mala prodavnica elektornike - Katalog</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Distribucija i prodaja na veliko i malo elektronskih komponenti">
+    <meta name="author" content="FrontEnd Zrenjanin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link href="http://www.cssscript.com/wp-includes/css/sticky.css" rel="stylesheet" type="text/css">
+    <!-- Js kod za katalog -->
+    <script src="katalog.js"></script>
+    <script>window.onload = run</script>
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript -->
+    <!-- jQuery deo i Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <div class="container">
+        <header>
+            <!-- Header podeljen u tri dela -->
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 prvi">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.png" width="150" alt="prodavnica logo">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center">
+                    <h1 class="display-5">Internet prodavnica</h1>
+                    <div class="display-6 podnaslov">Elektronskih komponenti</div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center treci">
+                    <img src="images/norton.png" width="200" alt="prodavnica logo">
+                </div>
+            </div>
+            <!-- Navigacija u bootstrapu-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#prodavnica1"
+                        aria-controls="prodavnica1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="prodavnica1">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Početna</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="katalog.html">Katalog<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="korpa.html">Korpa</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="o-nama.html">O nama</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pomoc.html">Pomoć</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-box">
+                        <input  type="text"  placeholder="&#x1F440">
+                        <span></span>
+                    </div>
+                    <div id="logout">
+                        <a class="nav-link" href="index.html" onclick="logout()">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main style="background-color: hsla(120,60%,70%,0.1);">
+            <!-- Glavna sekcija -->
+            <div class="card">
+                <div class="card-body">
+                    Dobrodošli,<h4><span id="kupac"></span>
+                    <div id="cart-container">
+                        <div id="cart">
+                            <input type="image" id="kolica" src="images/kolica.png"width="40px"onclick="korpa()">
+                        </div>
+                        <span id="itemCount"></span>
+                    </div>
+                </h4>
+                </div>
+            </div>
+
+
+
+        <div id="bg_mask">
+          <div id="frontlayer"><br/>
+            <table style="width:100%" id="cartTable"class="text-center m-0 p-0 table-striped">
+                <tr class="table table-warning">
+                    <th>Redni broj</th>
+                    <th>Proizvod</th>
+                    <th>Tip</th>
+                    <th>Broj komada</th>
+                    <th>Cena po komadu</th>
+                    <th>Ukupna cena</th>
+                    <th>Briši</th>
+                </tr>
+            </table>
+            <span id="ispisUkupno"></span>
+            <br><br>
+            <input type="button" style="float:right" class="btn-lg btn-warning" value="Nastavite sa kupovinom" onclick="sakrijKorpu();"/>
+          </div>
+        </div>
+
+
+
+<!--  Tabovani katalog - responsive    -->
+
+ 
+
+
+<nav>
+    <div class="nav nav-tabs text-center bg-transparent text-white" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" href="#tabotpornik" role="tab" data-toggle="tab"><img src="images/otpornik.png"><br>Otpornik</a>
+        <a class="nav-item nav-link" href="#tabkondenzator" role="tab" data-toggle="tab"><img src="images/elektrolitskikondenzator.png"><br>Kondenzator</a>
+        <a class="nav-item nav-link" href="#tabdioda" role="tab" data-toggle="tab"><img src="images/dioda.png"><br>Dioda</a>
+        <a class="nav-item nav-link" href="#tabtranzistor" role="tab" data-toggle="tab"><img src="images/tranzistor.png"><br>Tranzistor</a>
+    </div>
+</nav>
+<div class="tab-content" id="pills-tabContent">
+    <div class="bg-white tab-pane fade show active" id="tabotpornik" role="tabpanel">
+        <form id="forma">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class=" col-sm">
+                        <p class="ml-3 text-center">Model:</p>
+                        <input type="text"  style="display:none;" disabled value="otpornik" id="vrsta">
+                        <select class="ml-5 form-control-lg" id="tip" onChange="funkcija()">
+                            <option value="0" selected>izaberite</option>
+                            <option value="100r">100R</option>
+                            <option value="120r">120R</option>
+                            <option value="1k">1K</option>
+                            <option value="10k">10K</option>
+                            <option value="100k">100K</option>
+                        </select>
+                    </div>
+                    <div class="col-sm">
+                        <p class=" text-center">Unesite količinu:</p>
+                        <div class='ctrl'>
+                            <div class='ctrl__button ctrl__button--decrement' onclick="minus()">&ndash;</div>
+                                <div class='ctrl__counter'>
+                                    <input class='ctrl__counter-input' maxlength='10' type='text' value='0' id="komada" onclick="funkcija()" onChange="funkcija()">
+                                    <div class='ctrl__counter-num' id="ispis">0</div>
+                                </div>
+                            <div class='ctrl__button ctrl__button--increment' onclick="plus()">+</div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <p class="text-center">Cena po komadu:</p>
+                        <p class="text-center"><span id="cena">0</span> RSD</p>
+                    </div>
+                    <div class="col-sm">
+                        <p class="text-center">Ukupna vrednost:</p>
+                        <p class="text-center"><span id="ukupno">0</span> RSD </p>
+                    </div>
+                    <div class="col-sm">
+                        <button id="korpa1" class="btn btn-lg btn-primary active" disabled onclick="locstormake()">Dodaj u korpu</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center container align-items-center m-3 p-3"id="opis1">
+                    <div id="levo1" class="col-sm">
+                            <h5 class="font-weight-bold card-title text-dark">Uopšteno</h5>
+                            <p class="font-weight-bold text-justify card-text">Otpornik je pasivna elektronska komponenta koja se koristi kao osnovni element električnih mreža i elektronskih uređaja. Osnovna karakteristika ove komponente je otpor koji stvara prolasku struje kroz sebe. Upotrebljava se kako bi se obezbedio određen otpor koji bi ograničio protok struje i kontrolisao napon u kolu. Otpornici su elementi koji ukoliko na sebi ne nose brojnu oznaku imaju četiri ili pet prstenova različitih boja. Svaka boja ima svoje značenje tako da se može odrediti vrednost otpornika u sledećem obliku: vrednost ± tolerancija. </p>
+                            <p class="card-text"></p>
+                                
+                            <!--  Best you can do ?  -->
+                            <li>Materijal: karbon-film</li>
+                            <li>Tolerancija: 1%</li>
+                            <li>Snaga: 1/4 W</li>
+                            <li>Dimenzije: 2,3x7mm</li>
+                            
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bg-white tab-pane fade" id="tabkondenzator" role="tabpanel">
+
+            <form id="forma2">
+                    <div class="container">
+                        <div class="row justify-content-center align-items-center">
+                            <div class=" col-sm">
+                                <p class="ml-3 text-center">Model:</p>
+                                <input type="text"  style="display:none;" disabled value="kondenzator" id="vrsta2">
+                                <select class="ml-5 form-control-lg" id="tip2" onChange="funkcija2()">
+                                        <option value="0" selected>izaberite</option>
+                                        <option value="100uF">100uF</option>
+                                        <option value="220uF">220uF</option>
+                                        <option value="470uF">470uF</option>
+                                        <option value="1000uF">1000uF</option>
+                                        <option value="2200uF">2200uF</option>
+                                </select>
+                            </div>
+                            <div class="col-sm">
+                                <p class=" text-center">Unesite količinu:</p>
+                                <div class='ctrl'>
+                                    <div class='ctrl__button ctrl__button--decrement' onclick="minus2()">&ndash;</div>
+                                        <div class='ctrl__counter'>
+                                            <input class='ctrl__counter-input' maxlength='10' type='text' value='0' id="komada2" onclick="funkcija2()" onChange="funkcija2()">
+                                            <div class='ctrl__counter-num' id="ispis2">0</div>
+                                        </div>
+                                    <div class='ctrl__button ctrl__button--increment' onclick="plus2()">+</div>
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <p class="text-center">Cena po komadu:</p>
+                                <p class="text-center"><span id="cena2">0</span> RSD</p>
+                            </div>
+                            <div class="col-sm">
+                                <p class="text-center">Ukupna vrednost:</p>
+                                <p class="text-center"><span id="ukupno2">0</span> RSD </p>
+                            </div>
+                            <div class="col-sm">
+                                <button id="korpa2" class="btn btn-lg btn-primary active" disabled onclick="locstormake2()">Dodaj u korpu</button>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center align-items-center p-3">
+        <!--   Branko, ovde tekst + slika + sta god hoces, o KONDENZATORIMA -->
+						<ul>
+							<li>Radni napon: 50V</li>
+							<li>Radna temperatura: 80<sup>o</sup>C</li>
+							<li>Low ESR</li>
+							<li>Razmak imedju nozica: 5mm</li>
+						</ul>
+                        </div>
+                    </div>
+                </form>
+
+    </div>
+            <div class="bg-white tab-pane fade" id="tabdioda" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <form id="forma3">
+                            <div class="container">
+                                <div class="row justify-content-center align-items-center">
+                                    <div class=" col-sm">
+                                        <p class="ml-3 text-center">Model:</p>
+                                        <input type="text"  style="display:none;" disabled value="dioda" id="vrsta3">
+                                        <select class="ml-5 form-control-lg" id="tip3" onChange="funkcija3()">
+                                                <option value="0" selected>izaberite</option>
+                                                <option value="1N4007">1N4007</option>
+                                                <option value="1N5404">1N5404</option>
+                                                <option value="1N5408">1N5408</option>
+                                                <option value="25F120M">25F120M</option>
+                                                <option value="40HFR100M">40HFR100M</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class=" text-center">Unesite količinu:</p>
+                                        <div class='ctrl'>
+                                            <div class='ctrl__button ctrl__button--decrement' onclick="minus3()">&ndash;</div>
+                                                <div class='ctrl__counter'>
+                                                    <input class='ctrl__counter-input' maxlength='10' type='text' value='0' id="komada3" onclick="funkcija3()" onChange="funkcija3()">
+                                                    <div class='ctrl__counter-num' id="ispis3">0</div>
+                                                </div>
+                                            <div class='ctrl__button ctrl__button--increment' onclick="plus3()">+</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class="text-center">Cena po komadu:</p>
+                                        <p class="text-center"><span id="cena3">0</span> RSD</p>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class="text-center">Ukupna vrednost:</p>
+                                        <p class="text-center"><span id="ukupno3">0</span> RSD </p>
+                                    </div>
+                                    <div class="col-sm">
+                                        <button id="korpa3" class="btn btn-lg btn-primary active" disabled onclick="locstormake3()">Dodaj u korpu</button>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center align-items-center p-3">
+                                        <!--   Branko, ovde tekst + slika + sta god hoces, o DIODAMA -->
+										<ul>
+										<li>Tip: Ispravljacka</li>
+										<li>Radni napon:<1000V</li>
+										<li>Max struja:10A</li>
+										<li>Tip pakovanja: DO27/M5/M12×1,75
+										</ul>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+            <div class="bg-white tab-pane fade" id="tabtranzistor" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <form id="forma4">
+                            <div class="container">
+                                <div class="row justify-content-center align-items-center">
+                                    <div class=" col-sm">
+                                        <p class="ml-3 text-center">Model:</p>
+                                        <input type="text"  style="display:none;" disabled value="tranzistor" id="vrsta4">
+                                        <select class="ml-5 form-control-lg" id="tip4" onChange="funkcija4()">
+                                                <option value="0" selected>izaberite</option>
+                                                <option value="2N2222A">2N2222A</option>
+                                                <option value="2N3439">2N3439</option>
+                                                <option value="BC547">BC547</option>
+                                                <option value="2SA1943">2SA1943</option>
+                                                <option value="2SA1943">2SA1943</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class=" text-center">Unesite količinu:</p>
+                                        <div class='ctrl'>
+                                            <div class='ctrl__button ctrl__button--decrement' onclick="minus4()">&ndash;</div>
+                                                <div class='ctrl__counter'>
+                                                    <input class='ctrl__counter-input' maxlength='10' type='text' value='0' id="komada4" onclick="funkcija4()" onChange="funkcija4()">
+                                                    <div class='ctrl__counter-num' id="ispis4">0</div>
+                                                </div>
+                                            <div class='ctrl__button ctrl__button--increment' onclick="plus4()">+</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class="text-center">Cena po komadu:</p>
+                                        <p class="text-center"><span id="cena4">0</span> RSD</p>
+                                    </div>
+                                    <div class="col-sm">
+                                        <p class="text-center">Ukupna vrednost:</p>
+                                        <p class="text-center"><span id="ukupno4">0</span> RSD </p>
+                                    </div>
+                                    <div class="col-sm">
+                                        <button id="korpa4" class="btn btn-lg btn-primary active" disabled onclick="locstormake4()">Dodaj u korpu</button>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-center align-items-center p-3">
+                                        <!--   Branko, ovde tekst + slika + sta god hoces, o TRANZISTORIMA -->
+										<ul>
+										<li>Tip: Si PNP/NPN</li>
+										<li>Radni napon:<100V</li>
+										<li>Tip kucista:TO92/TO3</li>
+										<li>Snaga: 0,625-120W</li>
+										</ul>
+                                </div>
+                            </div>
+                        </form>
+            </div>
+          </div>
+<!--    KRAJ  Goran -->
+  
+            <div class="kasa">
+                <button class="cta" onclick=" location.href = 'korpa.html' , send() ">
+                    <span>Idi na kasu</span>
+                    <span>
+                        <svg width="66px" height="20px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path class="one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path class="two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path class="three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                        </g>
+                        </svg>
+                    </span>
+                </button>
+            </div> 
+
+        </main>
+        <footer>
+          <p>Pronašli ste odgovarajući artikal?
+          <a href="index.html">Registrujte se za početak kupovine!</a></p>
+          <p>Copyright &copy 2019</p>
+         </footer>
+    </div>
+</body>
+
+</html>
+
+
+
+<!--
+     (function() {
+            'use strict';
+          
+            function ctrls() {
+              var _this = this;
+          
+              this.counter = 0;
+              this.els = {
+                decrement: document.querySelector('.ctrl__button--decrement'),
+                counter: {
+                  container: document.querySelector('.ctrl__counter'),
+                  num: document.querySelector('.ctrl__counter-num'),
+                  input: document.querySelector('.ctrl__counter-input')
+                },
+                increment: document.querySelector('.ctrl__button--increment')
+              };
+          
+              this.decrement = function() {
+                var counter = _this.getCounter();
+                var nextCounter = (_this.counter > 0) ? --counter : counter;
+                _this.setCounter(nextCounter);
+              };
+          
+              this.increment = function() {
+                var counter = _this.getCounter();
+                var nextCounter = (counter < 9999999999) ? ++counter : counter;
+                _this.setCounter(nextCounter);
+              };
+          
+              this.getCounter = function() {
+                return _this.counter;
+              };
+          
+              this.setCounter = function(nextCounter) {
+                _this.counter = nextCounter;
+              };
+          
+              this.debounce = function(callback) {
+                setTimeout(callback, 100);
+              };
+          
+              this.render = function(hideClassName, visibleClassName) {
+                _this.els.counter.num.classList.add(hideClassName);
+          
+                setTimeout(function() {
+                  _this.els.counter.num.innerText = _this.getCounter();
+                  _this.els.counter.input.value = _this.getCounter();
+                  _this.els.counter.num.classList.add(visibleClassName);
+                }, 100);
+          
+                setTimeout(function() {
+                  _this.els.counter.num.classList.remove(hideClassName);
+                  _this.els.counter.num.classList.remove(visibleClassName);
+                }, 200);
+              };
+          
+              this.ready = function() {
+                _this.els.decrement.addEventListener('click', function() {
+                  _this.debounce(function() {
+                    _this.decrement();
+                    _this.render('is-decrement-hide', 'is-decrement-visible');
+                  });
+                });
+          
+                _this.els.increment.addEventListener('click', function() {
+                  _this.debounce(function() {
+                    _this.increment();
+                    _this.render('is-increment-hide', 'is-increment-visible');
+                  });
+                });
+          
+                _this.els.counter.input.addEventListener('input', function(e) {
+                  var parseValue = parseInt(e.target.value);
+                  if (!isNaN(parseValue) && parseValue >= 0) {
+                    _this.setCounter(parseValue);
+                    _this.render();
+                  }
+                });
+          
+                _this.els.counter.input.addEventListener('focus', function(e) {
+                  _this.els.counter.container.classList.add('is-input');
+                });
+          
+                _this.els.counter.input.addEventListener('blur', function(e) {
+                  _this.els.counter.container.classList.remove('is-input');
+                  _this.render();
+                });
+              };
+            };
+          
+            // init
+            var controls = new ctrls();
+            document.addEventListener('DOMContentLoaded', controls.ready);
+          })();
+-->

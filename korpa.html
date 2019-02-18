@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html lang="sr">
+
+<head>
+
+    <title>Mala prodavnica elektornike - Korpa</title>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Distribucija i prodaja na veliko i malo elektronskih komponenti">
+    <meta name="author" content="FrontEnd Zrenjanin">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="elektronika,elektronske komponente,otpornici,kondezatori,elektroliti,tranzistori">
+    <!-- Js kod  - mora ovde da stoji -->
+    <script src="korpa.js"></script>
+    <script>window.onload = start</script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,700|Roboto:400,700" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <!-- Bootstrap JavaScript -->
+    <!-- jQuery deo i Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+    <div class="container">
+        <header>
+            <!-- Header podeljen u tri dela -->
+            <div class="row">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 prvi">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.png" width="150" alt="prodavnica logo">
+                    </a>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center">
+                    <h1 class="display-5">Internet prodavnica</h1>
+                    <div class="display-6 podnaslov">Elektronskih komponenti</div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 drugi text-center justify-content-center align-self-center treci">
+                    <img src="images/norton.png" width="200" alt="prodavnica logo">
+                </div>
+            </div>
+            <!-- Navigacija u bootstrapu-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#prodavnica1"
+                        aria-controls="prodavnica1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="prodavnica1">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Početna</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="katalog.html">Katalog</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="korpa.html">Korpa<span class="sr-only">(current)</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="o-nama.html">O nama</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="kontakt.html">Kontakt</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pomoc.html">Pomoć</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="search-box">
+                        <input  type="text"  placeholder="&#x1F440">
+                        <span></span>
+                    </div>
+                    <div id="logout">
+                        <a class="nav-link" href="index.html" onclick="logout()">Logout</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Korpa main sekcija -->
+
+
+        <!--Dugme za zavrsavanje kupovine,ko radi html,nek ga pozicionira!-->
+
+        <!-- Dodati footer izmeniti text -->
+
+        <!--Sredjena tabela korpe-->
+
+        <table  class="table  table-striped ">
+            <thead class="table-warning">
+            <tr>
+                <th scope="col">Redni broj</th>
+                <th scope="col">Proizvod</th>
+                <th scope="col">Tip</th>
+                <th scope="col">Broj komada</th>
+                <th scope="col">Cena po komadu</th>
+                <th scope="col">Ukupna cena</th>
+            </tr>
+            </thead>
+            <tbody id="pText"></tbody>
+        </table>
+        <hr>
+        <p id="total"></p>
+        <div class="text-center">
+            <button type="button" class="btn btn-primary btn-lg" onclick="finish()">Zavrsi kupovinu!</button>
+        </div>
+    </main>
+    <footer id="korpaFooter">
+      <p>Predomislili ste se? <a href="katalog.html"> Pogledajte katalog još jednom.</a></p>
+      <p>Copyright &copy 2019</p>
+    </footer>
+    </div>
+
+    <script>
+        var animateButton = function(e) {
+    
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+    
+    e.target.classList.add('animate');
+    
+    e.target.classList.add('animate');
+    setTimeout(function(){
+      e.target.classList.remove('animate');
+    },2500);
+    };
+    
+    var classname = document.getElementsByClassName("kupovina");
+    
+    for (var i = 0; i < classname.length; i++) {
+    classname[i].addEventListener('click', animateButton, false);
+    }
+        </script>
+</body>
+
+</html>
